@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { ImpactCounter } from './components/ImpactCounter';
 import { MeterPanel } from './components/MeterPanel';
 import { DecisionCard } from './components/DecisionCard';
+import { PolicyWindow } from './components/PolicyWindow';
 import { ScenarioSelector } from './components/ScenarioSelector';
 import { EndScreen, calculateGrade } from './components/EndScreen';
 import { useGameState } from './stores/useGameState';
@@ -126,8 +127,13 @@ export default function App() {
                   onBackToMenu={handleBackToMenu}
                 />
               ) : currentDecision ? (
-                // Decision Card
-                <DecisionCard decision={currentDecision} onChoice={handleChoice} />
+                // Render appropriate decision type
+                currentDecision.type === 'policy_window' ? (
+                  <PolicyWindow decision={currentDecision} onChoice={handleChoice} />
+                ) : (
+                  // Default to DecisionCard for simple, framing_game, and slider_game
+                  <DecisionCard decision={currentDecision} onChoice={handleChoice} />
+                )
               ) : (
                 // Loading state
                 <div className="block text-center text-text-secondary">

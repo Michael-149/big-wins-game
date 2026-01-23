@@ -9,6 +9,59 @@
 
 ---
 
+## User Profile & Working Preferences
+
+### User Profile
+- I am not a professional software engineer.
+- I cannot read code. I often do not understand tooling, deployment, or infrastructure steps.
+- Assume I prefer clarity and safety over cleverness.
+
+### How to Work with Me
+- Explain *why* changes are needed before making them.
+- Default to the simplest possible solution.
+- Avoid advanced abstractions unless clearly necessary.
+- If multiple approaches exist, briefly compare them and recommend one.
+
+### Coding Style Preferences
+- Prefer readable, boring code.
+- Add comments when logic is non-obvious.
+- Do not refactor unrelated code without asking.
+
+### Workflow Preferences
+- When debugging:
+  1. State the hypothesis
+  2. Show how you verified it
+  3. Propose the fix
+
+- When changing behavior, tell me what will be different afterward.
+
+### Deployment & Visibility Instructions (IMPORTANT)
+When work involves **GitHub Pages or any deployment step**, you MUST:
+
+- Assume I do NOT know:
+  - where deployments are triggered
+  - how to confirm a deployment succeeded
+  - how long deployments typically take
+  - where to view the deployed result
+
+- Give **explicit, step-by-step instructions** that include:
+  - the exact GitHub UI locations to click (e.g., "Settings → Pages → Deployments")
+  - what I should expect to see at each step
+  - how to confirm whether the deployment used the latest commit
+  - how to know whether I am viewing a cached or outdated version
+
+- Explicitly answer:
+  - "What do I need to do *right now* to see the updated site?"
+  - "How do I verify this update is live?"
+
+- If there are multiple valid ways to view a deployment (Actions tab, Pages settings, commit hash, etc.), recommend **one primary path** and explain why.
+
+### Guardrails
+- If something could break production or deployment, warn me explicitly.
+- Ask before introducing new dependencies, frameworks, or build steps.
+
+---
+
 ## Development Workflow & Session Continuity
 
 ### Before Starting Any Work
