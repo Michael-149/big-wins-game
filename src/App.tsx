@@ -1,22 +1,47 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
 import { ImpactCounter } from './components/ImpactCounter';
 import { MeterPanel } from './components/MeterPanel';
+import { DecisionCard } from './components/DecisionCard';
+import { useGameState } from './stores/useGameState';
+import growthMindsetData from './data/scenarios/growth-mindset.json';
+import type { Scenario } from './data/types';
 
 export default function App() {
-  const [meters, setMeters] = useState({
-    evidence: 50,
-    network: 40,
-    narrative: 60,
-    implementation: 30,
-  });
-  const [impact, setImpact] = useState(250000);
+  const {
+    currentScenario,
+    currentDecisionId,
+    meters,
+    impact,
+    initializeGame,
+    makeChoice,
+    resetGame,
+  } = useGameState();
 
-  const adjustMeter = (meter: keyof typeof meters, delta: number) => {
-    setMeters((prev) => ({
-      ...prev,
-      [meter]: Math.max(0, Math.min(100, prev[meter] + delta)),
-    }));
+  // Initialize game with growth mindset scenario on mount
+  useEffect(() => {
+    initializeGame(growthMindsetData as Scenario);
+  }, [initializeGame]);
+
+  // Find current decision
+  const currentDecision = currentScenario?.decisions.find(
+    (d) => d.id === currentDecisionId
+  );
+
+  // Handle choice selection
+  const handleChoice = (choiceIndex: number) => {
+    if (!currentDecision) return;
+    const choice = currentDecision.choices[choiceIndex];
+    makeChoice(choice, currentDecisionId, choice.text);
   };
+
+  // Handle game restart
+  const handleRestart = () => {
+    resetGame();
+    initializeGame(growthMindsetData as Scenario);
+  };
+
+  // Game ended
+  const gameEnded = currentDecisionId === -1;
 
   return (
     <div className="min-h-screen bg-bg-secondary py-8 px-4">
@@ -26,17 +51,21 @@ export default function App() {
           <h1 className="block text-4xl font-bold text-primary mb-2">
             Big Wins: The Game
           </h1>
-          <p className="block text-lg text-text-secondary">
-            Interactive research-to-policy decision-making
-          </p>
+          {currentScenario && (
+            <p className="block text-lg text-text-secondary">
+              {currentScenario.title}
+            </p>
+          )}
         </div>
 
         {/* Impact Counter */}
-        <ImpactCounter
-          current={impact}
-          target={500000}
-          metric="students reached"
-        />
+        {currentScenario && (
+          <ImpactCounter
+            current={impact}
+            target={currentScenario.victoryTarget}
+            metric={currentScenario.victoryMetric}
+          />
+        )}
 
         {/* Meter Panel */}
         <MeterPanel
@@ -46,41 +75,38 @@ export default function App() {
           implementation={meters.implementation}
         />
 
-        {/* Demo Controls */}
-        <div className="block max-w-4xl mx-auto mt-6 bg-white rounded-lg shadow-md border border-border p-6">
-          <h3 className="block text-lg font-bold text-text-dark mb-4">Demo Controls</h3>
-          <div className="block grid grid-cols-2 gap-4">
-            <button
-              onClick={() => adjustMeter('evidence', 10)}
-              className="px-4 py-2 bg-primary text-white rounded hover:bg-primary-dark transition-colors"
-            >
-              +10 Evidence
-            </button>
-            <button
-              onClick={() => adjustMeter('network', 10)}
-              className="px-4 py-2 bg-success text-white rounded hover:bg-success/90 transition-colors"
-            >
-              +10 Network
-            </button>
-            <button
-              onClick={() => adjustMeter('narrative', 10)}
-              className="px-4 py-2 bg-warning text-white rounded hover:bg-warning/90 transition-colors"
-            >
-              +10 Narrative
-            </button>
-            <button
-              onClick={() => adjustMeter('implementation', 10)}
-              className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition-colors"
-            >
-              +10 Implementation
-            </button>
-            <button
-              onClick={() => setImpact((prev) => prev + 50000)}
-              className="col-span-2 px-4 py-2 bg-primary-dark text-white rounded hover:bg-primary transition-colors"
-            >
-              +50,000 Impact
-            </button>
-          </div>
+        {/* Game Content */}
+        <div className="mt-6">
+          {gameEnded ? (
+            // End Screen (placeholder)
+            <div className="block max-w-4xl mx-auto bg-white rounded-lg shadow-lg border border-border p-8 text-center">
+              <h2 className="block text-3xl font-bold text-primary mb-4">
+                Game Complete!
+              </h2>
+              <p className="block text-xl text-text-dark mb-2">
+                Final Impact: {impact.toLocaleString()} / {currentScenario?.victoryTarget.toLocaleString()}
+              </p>
+              <p className="block text-lg text-text-secondary mb-6">
+                {impact >= (currentScenario?.victoryTarget || 0)
+                  ? 'You achieved your goal! 🎉'
+                  : 'Keep trying to reach your target!'}
+              </p>
+              <button
+                onClick={handleRestart}
+                className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors"
+              >
+                Play Again
+              </button>
+            </div>
+          ) : currentDecision ? (
+            // Decision Card
+            <DecisionCard decision={currentDecision} onChoice={handleChoice} />
+          ) : (
+            // Loading state
+            <div className="block text-center text-text-secondary">
+              Loading...
+            </div>
+          )}
         </div>
       </div>
     </div>
