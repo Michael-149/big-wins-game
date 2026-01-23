@@ -1,12 +1,19 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ImpactCounter } from './components/ImpactCounter';
 import { MeterPanel } from './components/MeterPanel';
 import { DecisionCard } from './components/DecisionCard';
+import { ScenarioSelector } from './components/ScenarioSelector';
+import { EndScreen, calculateGrade } from './components/EndScreen';
 import { useGameState } from './stores/useGameState';
-import growthMindsetData from './data/scenarios/growth-mindset.json';
-import type { Scenario } from './data/types';
+import { useProgressStore } from './stores/useProgressStore';
+import type { ScenarioMetadata } from './data/scenarioMetadata';
+
+type GameScreen = 'menu' | 'playing' | 'ended';
 
 export default function App() {
+  const [currentScreen, setCurrentScreen] = useState<GameScreen>('menu');
+  const [selectedScenarioMeta, setSelectedScenarioMeta] = useState<ScenarioMetadata | null>(null);
+
   const {
     currentScenario,
     currentDecisionId,
@@ -17,10 +24,23 @@ export default function App() {
     resetGame,
   } = useGameState();
 
-  // Initialize game with growth mindset scenario on mount
+  const { recordCompletion } = useProgressStore();
+
+  // When a scenario is selected from the menu
+  const handleSelectScenario = (scenarioMeta: ScenarioMetadata) => {
+    setSelectedScenarioMeta(scenarioMeta);
+    initializeGame(scenarioMeta.data);
+    setCurrentScreen('playing');
+  };
+
+  // When game ends, record completion
   useEffect(() => {
-    initializeGame(growthMindsetData as Scenario);
-  }, [initializeGame]);
+    if (currentDecisionId === -1 && currentScreen === 'playing' && currentScenario && selectedScenarioMeta) {
+      const grade = calculateGrade(impact, currentScenario.victoryTarget);
+      recordCompletion(selectedScenarioMeta.id, grade, impact, meters);
+      setCurrentScreen('ended');
+    }
+  }, [currentDecisionId, currentScreen, currentScenario, selectedScenarioMeta, impact, meters, recordCompletion]);
 
   // Find current decision
   const currentDecision = currentScenario?.decisions.find(
@@ -34,80 +54,89 @@ export default function App() {
     makeChoice(choice, currentDecisionId, choice.text);
   };
 
-  // Handle game restart
+  // Handle game restart (same scenario)
   const handleRestart = () => {
+    if (!selectedScenarioMeta) return;
     resetGame();
-    initializeGame(growthMindsetData as Scenario);
+    initializeGame(selectedScenarioMeta.data);
+    setCurrentScreen('playing');
   };
 
-  // Game ended
-  const gameEnded = currentDecisionId === -1;
+  // Return to menu
+  const handleBackToMenu = () => {
+    resetGame();
+    setSelectedScenarioMeta(null);
+    setCurrentScreen('menu');
+  };
 
   return (
     <div className="min-h-screen bg-bg-secondary py-8 px-4">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="block text-center mb-8">
-          <h1 className="block text-4xl font-bold text-primary mb-2">
-            Big Wins: The Game
-          </h1>
-          {currentScenario && (
-            <p className="block text-lg text-text-secondary">
-              {currentScenario.title}
-            </p>
-          )}
-        </div>
-
-        {/* Impact Counter */}
-        {currentScenario && (
-          <ImpactCounter
-            current={impact}
-            target={currentScenario.victoryTarget}
-            metric={currentScenario.victoryMetric}
-          />
-        )}
-
-        {/* Meter Panel */}
-        <MeterPanel
-          evidence={meters.evidence}
-          network={meters.network}
-          narrative={meters.narrative}
-          implementation={meters.implementation}
-        />
-
-        {/* Game Content */}
-        <div className="mt-6">
-          {gameEnded ? (
-            // End Screen (placeholder)
-            <div className="block max-w-4xl mx-auto bg-white rounded-lg shadow-lg border border-border p-8 text-center">
-              <h2 className="block text-3xl font-bold text-primary mb-4">
-                Game Complete!
-              </h2>
-              <p className="block text-xl text-text-dark mb-2">
-                Final Impact: {impact.toLocaleString()} / {currentScenario?.victoryTarget.toLocaleString()}
-              </p>
-              <p className="block text-lg text-text-secondary mb-6">
-                {impact >= (currentScenario?.victoryTarget || 0)
-                  ? 'You achieved your goal! 🎉'
-                  : 'Keep trying to reach your target!'}
-              </p>
+        {currentScreen === 'menu' ? (
+          // Scenario Selection Screen
+          <ScenarioSelector onSelectScenario={handleSelectScenario} />
+        ) : (
+          <>
+            {/* Header */}
+            <div className="block text-center mb-8">
+              <h1 className="block text-4xl font-bold text-primary mb-2">
+                Big Wins: The Game
+              </h1>
+              {currentScenario && (
+                <p className="block text-lg text-text-secondary">
+                  {currentScenario.title}
+                </p>
+              )}
               <button
-                onClick={handleRestart}
-                className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors"
+                onClick={handleBackToMenu}
+                className="mt-2 text-sm text-primary hover:underline"
               >
-                Play Again
+                ← Back to Scenarios
               </button>
             </div>
-          ) : currentDecision ? (
-            // Decision Card
-            <DecisionCard decision={currentDecision} onChoice={handleChoice} />
-          ) : (
-            // Loading state
-            <div className="block text-center text-text-secondary">
-              Loading...
+
+            {/* Impact Counter */}
+            {currentScenario && currentScreen === 'playing' && (
+              <ImpactCounter
+                current={impact}
+                target={currentScenario.victoryTarget}
+                metric={currentScenario.victoryMetric}
+              />
+            )}
+
+            {/* Meter Panel */}
+            {currentScreen === 'playing' && (
+              <MeterPanel
+                evidence={meters.evidence}
+                network={meters.network}
+                narrative={meters.narrative}
+                implementation={meters.implementation}
+              />
+            )}
+
+            {/* Game Content */}
+            <div className="mt-6">
+              {currentScreen === 'ended' && currentScenario ? (
+                // End Screen with grading
+                <EndScreen
+                  scenario={currentScenario}
+                  impact={impact}
+                  meters={meters}
+                  onRestart={handleRestart}
+                  onBackToMenu={handleBackToMenu}
+                />
+              ) : currentDecision ? (
+                // Decision Card
+                <DecisionCard decision={currentDecision} onChoice={handleChoice} />
+              ) : (
+                // Loading state
+                <div className="block text-center text-text-secondary">
+                  Loading...
+                </div>
+              )}
             </div>
-          )}
-        </div>
+          </>
+        )}
       </div>
     </div>
   );
