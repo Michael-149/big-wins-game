@@ -1,0 +1,337 @@
+{
+  "id": "moving_to_opportunity",
+  "title": "Moving to Opportunity",
+  "description": "1994. HUD is launching a randomized trial to test if moving low-income families to better neighborhoods improves their lives. Initial results will be disappointing. Can you persist through the evidence, prove neighborhoods matter, and transform housing policy?",
+  "startYear": 1994,
+  "victoryTarget": 10000,
+  "victoryMetric": "families assisted",
+  "decisions": [
+    {
+      "id": 1,
+      "yearRange": "1994-1998",
+      "title": "Launching the Experiment",
+      "type": "simple",
+      "contextCard": "HUD has greenlit the Moving to Opportunity demonstration. 4,600 families in five cities will be randomly assigned to receive housing vouchers with requirements to move to low-poverty neighborhoods, unrestricted vouchers, or remain in public housing. This is one of the largest housing experiments ever conducted.",
+      "choices": [
+        {
+          "text": "Focus on rigorous experimental design—random assignment, careful tracking, standardized outcomes",
+          "effects": {
+            "evidence": 10,
+            "network": 4,
+            "narrative": 2,
+            "implementation": 6,
+            "impact": 100
+          },
+          "nextDecision": 2
+        },
+        {
+          "text": "Prioritize intensive family support services to maximize moves to opportunity neighborhoods",
+          "effects": {
+            "evidence": 4,
+            "network": 6,
+            "narrative": 6,
+            "implementation": 8,
+            "impact": 200
+          },
+          "nextDecision": 2
+        },
+        {
+          "text": "Build partnerships with housing authorities and community organizations in all five cities",
+          "effects": {
+            "evidence": 6,
+            "network": 10,
+            "narrative": 4,
+            "implementation": 8,
+            "impact": 300
+          },
+          "nextDecision": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "yearRange": "2003",
+      "title": "Disappointing Interim Findings",
+      "type": "simple",
+      "contextCard": "The interim evaluation shows mixed results. While families report feeling safer and less stressed, there are no significant improvements in adult employment or earnings. Only 15% of treatment families successfully moved to low-poverty neighborhoods. Many researchers are concluding neighborhood effects are overstated.",
+      "choices": [
+        {
+          "text": "Double down on analysis—maybe we're measuring the wrong outcomes or wrong timeframes",
+          "effects": {
+            "evidence": 8,
+            "network": -2,
+            "narrative": -4,
+            "implementation": 2,
+            "impact": 100
+          },
+          "nextDecision": 3
+        },
+        {
+          "text": "Pivot research focus to understanding barriers that prevented most families from moving",
+          "effects": {
+            "evidence": 6,
+            "network": 6,
+            "narrative": 4,
+            "implementation": 4,
+            "impact": 200
+          },
+          "nextDecision": 3
+        },
+        {
+          "text": "Defend the intervention publicly—improvements in safety and mental health matter even without earnings gains",
+          "effects": {
+            "evidence": 2,
+            "network": 4,
+            "narrative": 10,
+            "implementation": 2,
+            "impact": 150
+          },
+          "nextDecision": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "yearRange": "2011",
+      "title": "Final Evaluation",
+      "type": "simple",
+      "contextCard": "The final MTO evaluation confirms interim findings: significant improvements in mental health, safety, and neighborhood quality, but no effects on adult economic outcomes. The demonstration officially ends. Funding is drying up. Many view MTO as evidence that neighborhoods don't drive economic mobility after all.",
+      "choices": [
+        {
+          "text": "Advocate for long-term tracking—children in the study are still young, we need to follow them into adulthood",
+          "effects": {
+            "evidence": 8,
+            "network": 6,
+            "narrative": 4,
+            "implementation": 4,
+            "impact": 300
+          },
+          "nextDecision": 4
+        },
+        {
+          "text": "Accept the findings and shift to place-based interventions—improving existing neighborhoods rather than moving families",
+          "effects": {
+            "evidence": 4,
+            "network": 4,
+            "narrative": 6,
+            "implementation": 6,
+            "impact": 200
+          },
+          "nextDecision": 4
+        },
+        {
+          "text": "Explore administrative data linkages—can we connect MTO participants to IRS tax records to track earnings?",
+          "effects": {
+            "evidence": 10,
+            "network": 8,
+            "narrative": 2,
+            "implementation": 2,
+            "impact": 250
+          },
+          "nextDecision": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "yearRange": "2015-2016",
+      "title": "The Tax Data Breakthrough",
+      "type": "policy_window",
+      "timer": 30,
+      "contextCard": "Raj Chetty, Nathaniel Hendren, and Lawrence Katz have linked MTO participants to IRS tax records. The results are stunning: children who moved to low-poverty neighborhoods before age 13 earn 31% more as adults—about $302,000 more over their lifetimes. Every additional year of exposure to a better neighborhood matters. This completely overturns the earlier conclusions.",
+      "choices": [
+        {
+          "text": "Publish immediately in a top journal with full methodological transparency and replication files",
+          "effects": {
+            "evidence": 12,
+            "network": 6,
+            "narrative": 8,
+            "implementation": 4,
+            "impact": 1000
+          },
+          "nextDecision": 5
+        },
+        {
+          "text": "Brief HUD and housing authorities before publication—give them time to prepare policy responses",
+          "effects": {
+            "evidence": 8,
+            "network": 10,
+            "narrative": 8,
+            "implementation": 10,
+            "impact": 1200
+          },
+          "nextDecision": 5
+        },
+        {
+          "text": "Launch Opportunity Insights to directly translate findings into policy tools and partnerships",
+          "effects": {
+            "evidence": 8,
+            "network": 12,
+            "narrative": 10,
+            "implementation": 12,
+            "impact": 1500
+          },
+          "nextDecision": 5
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "yearRange": "2017-2018",
+      "title": "The 15% Problem",
+      "type": "simple",
+      "contextCard": "Policymakers are excited about the findings, but there's a critical implementation gap: even with vouchers and counseling, only 15% of families in MTO successfully moved to low-poverty neighborhoods. Landlords reject vouchers, families face discrimination, security deposits are barriers, and many are unfamiliar with opportunity neighborhoods. How do you help more families move?",
+      "choices": [
+        {
+          "text": "Research the barriers systematically—interviews, surveys, analysis of why families didn't move",
+          "effects": {
+            "evidence": 8,
+            "network": 4,
+            "narrative": 2,
+            "implementation": 4,
+            "impact": 400
+          },
+          "nextDecision": 6
+        },
+        {
+          "text": "Partner with Seattle/King County housing authorities to design and test intensive support services",
+          "effects": {
+            "evidence": 6,
+            "network": 10,
+            "narrative": 6,
+            "implementation": 12,
+            "impact": 1000
+          },
+          "nextDecision": 6
+        },
+        {
+          "text": "Advocate for state/federal laws banning source-of-income discrimination against voucher holders",
+          "effects": {
+            "evidence": 2,
+            "network": 8,
+            "narrative": 12,
+            "implementation": 6,
+            "impact": 600
+          },
+          "nextDecision": 6
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "yearRange": "2018-2020",
+      "title": "Creating Moves to Opportunity",
+      "type": "slider_game",
+      "contextCard": "The CMTO pilot in Seattle/King County provides voucher families with one-on-one housing navigators, short-term financial assistance for deposits and fees, landlord engagement, and customized neighborhood information. This is expensive—about $2,600 per family—but early results suggest it's dramatically increasing successful moves. Fine-tune the intervention design.",
+      "choices": [
+        {
+          "text": "Run a rigorous RCT comparing CMTO to standard voucher assistance",
+          "effects": {
+            "evidence": 12,
+            "network": 6,
+            "narrative": 4,
+            "implementation": 8,
+            "impact": 1500
+          },
+          "nextDecision": 7
+        },
+        {
+          "text": "Scale quickly to other cities before completing evaluation—families need this now",
+          "effects": {
+            "evidence": 4,
+            "network": 8,
+            "narrative": 10,
+            "implementation": 12,
+            "impact": 2000
+          },
+          "nextDecision": 7
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "yearRange": "2021-2023",
+      "title": "CMTO Evaluation Results",
+      "type": "policy_window",
+      "timer": 30,
+      "contextCard": "The experimental evaluation shows CMTO increased successful moves from 15% to 53%—a 3.5x improvement. The intervention is cost-effective: $2,600 in services generates an estimated $302,000 in lifetime earnings per child who moves young. HUD is launching a national mobility demonstration program. You've done it—transformed disappointing initial findings into transformative policy.",
+      "choices": [
+        {
+          "text": "Help HUD design the national demonstration—9 sites, evidence-based supports, rigorous evaluation",
+          "effects": {
+            "evidence": 10,
+            "network": 12,
+            "narrative": 8,
+            "implementation": 12,
+            "impact": 2500
+          },
+          "nextDecision": 8
+        },
+        {
+          "text": "Focus on state/local adoptions—work directly with housing authorities to implement mobility programs",
+          "effects": {
+            "evidence": 6,
+            "network": 10,
+            "narrative": 10,
+            "implementation": 14,
+            "impact": 3000
+          },
+          "nextDecision": 8
+        },
+        {
+          "text": "Advocate for mandatory mobility services in all housing voucher programs nationally",
+          "effects": {
+            "evidence": 4,
+            "network": 8,
+            "narrative": 14,
+            "implementation": 10,
+            "impact": 3500
+          },
+          "nextDecision": 8
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "yearRange": "2024-present",
+      "title": "Scaling Nationwide",
+      "type": "simple",
+      "contextCard": "HUD's mobility demonstrations are running in nine cities. Several states have banned source-of-income discrimination. Philanthropies are funding additional mobility programs. But challenges remain: limited housing supply in opportunity neighborhoods, political resistance to economic integration, and the question of whether to focus on mobility or place-based investments.",
+      "choices": [
+        {
+          "text": "Continue rigorous evaluation—track long-term outcomes, cost-effectiveness, and adaptations across sites",
+          "effects": {
+            "evidence": 10,
+            "network": 8,
+            "narrative": 6,
+            "implementation": 8,
+            "impact": 1000
+          },
+          "nextDecision": "end"
+        },
+        {
+          "text": "Develop hybrid strategies combining mobility assistance with place-based investments in existing neighborhoods",
+          "effects": {
+            "evidence": 8,
+            "network": 10,
+            "narrative": 8,
+            "implementation": 12,
+            "impact": 1200
+          },
+          "nextDecision": "end"
+        },
+        {
+          "text": "Make the case for universal mobility supports—every voucher holder should receive navigation services",
+          "effects": {
+            "evidence": 6,
+            "network": 10,
+            "narrative": 12,
+            "implementation": 10,
+            "impact": 1500
+          },
+          "nextDecision": "end"
+        }
+      ]
+    }
+  ]
+}

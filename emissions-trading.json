@@ -1,0 +1,337 @@
+{
+  "id": "emissions_trading",
+  "title": "Emissions Trading Systems",
+  "description": "1970. The EPA is born, but command-and-control regulation is expensive and inflexible. You believe markets can solve pollution more efficiently through tradable permits. Can you convince environmentalists that 'selling pollution rights' isn't immoral—and prove it works?",
+  "startYear": 1970,
+  "victoryTarget": 25000000,
+  "victoryMetric": "tons CO2 reduced annually",
+  "decisions": [
+    {
+      "id": 1,
+      "yearRange": "1970-1975",
+      "title": "Property Rights and Pollution",
+      "type": "simple",
+      "contextCard": "Ronald Coase's 1960 paper on property rights has sparked theoretical interest. J.H. Dales proposed tradable pollution rights. The EPA is experimenting with flexible regulation, letting firms offset emissions at one facility with improvements at another. This is radical—most environmentalists believe pollution should be controlled through strict technology mandates.",
+      "choices": [
+        {
+          "text": "Develop rigorous mathematical models proving emissions markets reach efficient equilibria",
+          "effects": {
+            "evidence": 10,
+            "network": 2,
+            "narrative": -2,
+            "implementation": 4,
+            "impact": 100000
+          },
+          "nextDecision": 2
+        },
+        {
+          "text": "Partner with EPA reformers to test small-scale emissions offset experiments",
+          "effects": {
+            "evidence": 6,
+            "network": 8,
+            "narrative": 4,
+            "implementation": 10,
+            "impact": 200000
+          },
+          "nextDecision": 2
+        },
+        {
+          "text": "Build coalitions with industry groups frustrated by expensive command-and-control regulations",
+          "effects": {
+            "evidence": 4,
+            "network": 10,
+            "narrative": 6,
+            "implementation": -4,
+            "impact": 150000
+          },
+          "nextDecision": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "yearRange": "1976-1983",
+      "title": "EPA's Flexible Regulation",
+      "type": "framing_game",
+      "contextCard": "The EPA has introduced emissions 'credits' (1979), 'banking' to smooth price volatility (1980), and limited inter-firm trading. But there's resistance: EPA staff trained in command-and-control methods are skeptical. Environmental NGOs view selling pollution rights as ethically problematic. The language matters—how you frame this will determine acceptance.",
+      "choices": [
+        {
+          "text": "Reframe as 'allowances' not 'rights,' emphasize overall emissions caps",
+          "effects": {
+            "evidence": 4,
+            "network": 6,
+            "narrative": 12,
+            "implementation": 6,
+            "impact": 500000
+          },
+          "nextDecision": 3
+        },
+        {
+          "text": "Document cost savings rigorously—show society saves money while reducing pollution",
+          "effects": {
+            "evidence": 10,
+            "network": 4,
+            "narrative": 6,
+            "implementation": 6,
+            "impact": 400000
+          },
+          "nextDecision": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "yearRange": "1984-1986",
+      "title": "Evaluating Early Trading",
+      "type": "simple",
+      "contextCard": "Thomas Tietenberg's evaluation finds that while EPA's piecemeal trading programs prove the principle works, implementation falls short of theoretical potential. Banking and trading are underutilized. Firms don't trust the system will persist. Transaction costs are high. Political incentives limit adoption.",
+      "choices": [
+        {
+          "text": "Use findings to design improved trading systems with lower transaction costs and clearer rules",
+          "effects": {
+            "evidence": 8,
+            "network": 6,
+            "narrative": 4,
+            "implementation": 10,
+            "impact": 800000
+          },
+          "nextDecision": 4
+        },
+        {
+          "text": "Advocate for comprehensive legislation establishing permanent trading systems, not just experiments",
+          "effects": {
+            "evidence": 6,
+            "network": 10,
+            "narrative": 10,
+            "implementation": 8,
+            "impact": 1000000
+          },
+          "nextDecision": 4
+        },
+        {
+          "text": "Continue incremental improvements to EPA flexibility programs while building evidence",
+          "effects": {
+            "evidence": 10,
+            "network": 4,
+            "narrative": 4,
+            "implementation": 8,
+            "impact": 600000
+          },
+          "nextDecision": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "yearRange": "1988-1989",
+      "title": "Project 88: Knowledge Brokering",
+      "type": "policy_window",
+      "timer": 30,
+      "contextCard": "Robert Stavins and Senators Wirth and Heinz are launching Project 88—a nonpartisan effort funded by major philanthropies to develop emissions trading recommendations. This convenes industry, academia, environmental organizations, and government. It's not just research; it's strategic coalition-building around market mechanisms. This could be the breakthrough.",
+      "choices": [
+        {
+          "text": "Lead technical design—develop detailed policy proposals with attention to industry-specific concerns",
+          "effects": {
+            "evidence": 10,
+            "network": 8,
+            "narrative": 8,
+            "implementation": 12,
+            "impact": 2000000
+          },
+          "nextDecision": 5
+        },
+        {
+          "text": "Focus on building environmental NGO support—show how cap-and-trade achieves stricter pollution limits",
+          "effects": {
+            "evidence": 6,
+            "network": 12,
+            "narrative": 12,
+            "implementation": 8,
+            "impact": 1800000
+          },
+          "nextDecision": 5
+        },
+        {
+          "text": "Work with industry to design systems that protect jobs while reducing emissions",
+          "effects": {
+            "evidence": 6,
+            "network": 10,
+            "narrative": 10,
+            "implementation": 12,
+            "impact": 2200000
+          },
+          "nextDecision": 5
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "yearRange": "1990-1995",
+      "title": "The Acid Rain Program",
+      "type": "policy_window",
+      "timer": 30,
+      "contextCard": "The 1990 Clean Air Act amendments establish the Acid Rain Program—a national cap-and-trade system for SO₂ and NOx from power plants. This is the first large-scale emissions trading system. Early results are exceeding expectations: emissions are dropping faster than projected, at lower costs than command-and-control alternatives.",
+      "choices": [
+        {
+          "text": "Document success rigorously—track emissions, costs, health benefits, and compare to counterfactual regulations",
+          "effects": {
+            "evidence": 12,
+            "network": 6,
+            "narrative": 8,
+            "implementation": 8,
+            "impact": 5000000
+          },
+          "nextDecision": 6
+        },
+        {
+          "text": "Use success to advocate for greenhouse gas trading internationally—prep for Kyoto Protocol negotiations",
+          "effects": {
+            "evidence": 8,
+            "network": 12,
+            "narrative": 12,
+            "implementation": 6,
+            "impact": 4500000
+          },
+          "nextDecision": 6
+        },
+        {
+          "text": "Help EPA refine implementation—auction design, banking rules, monitoring and enforcement",
+          "effects": {
+            "evidence": 8,
+            "network": 8,
+            "narrative": 6,
+            "implementation": 14,
+            "impact": 6000000
+          },
+          "nextDecision": 6
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "yearRange": "1997-2005",
+      "title": "Kyoto and EU ETS",
+      "type": "simple",
+      "contextCard": "The Kyoto Protocol incorporates market-based mechanisms for greenhouse gases. But the U.S. withdraws in 2001. The EU launches the EU ETS in 2005. Early phases suffer from over-allocation—permit prices collapse. The mechanism works in theory but implementation needs refinement.",
+      "choices": [
+        {
+          "text": "Work with EU to fix over-allocation problems—tighter caps, reserve prices, dynamic adjustment mechanisms",
+          "effects": {
+            "evidence": 8,
+            "network": 10,
+            "narrative": 6,
+            "implementation": 12,
+            "impact": 3000000
+          },
+          "nextDecision": 7
+        },
+        {
+          "text": "Develop subnational U.S. systems (California, RGGI) to maintain momentum despite federal withdrawal",
+          "effects": {
+            "evidence": 6,
+            "network": 12,
+            "narrative": 10,
+            "implementation": 12,
+            "impact": 2500000
+          },
+          "nextDecision": 7
+        },
+        {
+          "text": "Research Kyoto's Clean Development Mechanism—are offset projects truly additional?",
+          "effects": {
+            "evidence": 12,
+            "network": 6,
+            "narrative": 8,
+            "implementation": 6,
+            "impact": 2000000
+          },
+          "nextDecision": 7
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "yearRange": "2009-2020",
+      "title": "China's Regional Pilots",
+      "type": "simple",
+      "contextCard": "China is testing regional ETS pilots. This could become the world's largest carbon market if scaled nationally. Early evaluations show 16.7% emissions reductions. But challenges include weak monitoring, low prices, and limited inter-regional trading.",
+      "choices": [
+        {
+          "text": "Partner with Chinese researchers to evaluate pilots and recommend national system design",
+          "effects": {
+            "evidence": 10,
+            "network": 12,
+            "narrative": 6,
+            "implementation": 10,
+            "impact": 4000000
+          },
+          "nextDecision": 8
+        },
+        {
+          "text": "Develop monitoring technology—satellites, AI, blockchain for transparent emissions tracking",
+          "effects": {
+            "evidence": 8,
+            "network": 8,
+            "narrative": 8,
+            "implementation": 14,
+            "impact": 3500000
+          },
+          "nextDecision": 8
+        },
+        {
+          "text": "Advocate for linking regional systems internationally—create global carbon price convergence",
+          "effects": {
+            "evidence": 6,
+            "network": 12,
+            "narrative": 12,
+            "implementation": 8,
+            "impact": 4500000
+          },
+          "nextDecision": 8
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "yearRange": "2021-present",
+      "title": "Mature Implementation",
+      "type": "simple",
+      "contextCard": "68 carbon pricing instruments operate globally (36 taxes, 32 ETS systems). China launched a national ETS in 2021. The EU is implementing Carbon Border Adjustment Mechanisms. Debates have shifted from 'does it work?' to 'how do we optimize design?'",
+      "choices": [
+        {
+          "text": "Research optimal design—auction vs. allocation, banking rules, price floors/ceilings",
+          "effects": {
+            "evidence": 12,
+            "network": 8,
+            "narrative": 6,
+            "implementation": 10,
+            "impact": 5000000
+          },
+          "nextDecision": "end"
+        },
+        {
+          "text": "Address distributional concerns—design systems that protect low-income consumers and workers",
+          "effects": {
+            "evidence": 8,
+            "network": 10,
+            "narrative": 12,
+            "implementation": 10,
+            "impact": 6000000
+          },
+          "nextDecision": "end"
+        },
+        {
+          "text": "Advocate for universal carbon pricing—every major economy should price emissions",
+          "effects": {
+            "evidence": 6,
+            "network": 12,
+            "narrative": 14,
+            "implementation": 8,
+            "impact": 7000000
+          },
+          "nextDecision": "end"
+        }
+      ]
+    }
+  ]
+}

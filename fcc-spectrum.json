@@ -1,0 +1,326 @@
+{
+  "id": "fcc_spectrum",
+  "title": "Spectrum Auctions: Designing Markets",
+  "description": "1993. The FCC needs to allocate radio spectrum worth billions. The old system—beauty contests and lotteries—is broken. You propose using auction theory to design a market. Can you prove that economic theory works in the real world?",
+  "startYear": 1993,
+  "victoryTarget": 100,
+  "victoryMetric": "billion dollars allocated efficiently",
+  "decisions": [
+    {
+      "id": 1,
+      "yearRange": "1993-1994",
+      "title": "The Opportunity",
+      "type": "simple",
+      "contextCard": "Congress has mandated FCC spectrum auctions. Traditional approaches—beauty contests judging 'public interest' and random lotteries—have failed spectacularly. Lottery winners immediately flip licenses for huge profits. The FCC needs a better way. You and Paul Milgrom believe auction theory can solve this.",
+      "choices": [
+        {
+          "text": "Develop theoretical framework—prove auctions can achieve efficient allocation and prevent gaming",
+          "effects": {
+            "evidence": 10,
+            "network": 4,
+            "narrative": 4,
+            "implementation": 6,
+            "impact": 5
+          },
+          "nextDecision": 2
+        },
+        {
+          "text": "Study international precedents—New Zealand and Australia have attempted spectrum auctions",
+          "effects": {
+            "evidence": 8,
+            "network": 6,
+            "narrative": 6,
+            "implementation": 8,
+            "impact": 6
+          },
+          "nextDecision": 2
+        },
+        {
+          "text": "Build relationships at FCC—understand their constraints, concerns, and political pressures",
+          "effects": {
+            "evidence": 6,
+            "network": 10,
+            "narrative": 8,
+            "implementation": 6,
+            "impact": 7
+          },
+          "nextDecision": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "yearRange": "1994",
+      "title": "Designing the Mechanism",
+      "type": "slider_game",
+      "contextCard": "You're designing the first major US spectrum auction. Key questions: Simultaneous or sequential? Sealed bid or ascending? How to prevent collusion? How to handle license complementarities—bidders want combinations, not isolated licenses. Get this wrong and billions are misallocated. Get it right and you prove market design works.",
+      "choices": [
+        {
+          "text": "Propose simultaneous multiple round auction—bidders see prices, can switch licenses, reduces winner's curse",
+          "effects": {
+            "evidence": 12,
+            "network": 8,
+            "narrative": 8,
+            "implementation": 12,
+            "impact": 12
+          },
+          "nextDecision": 3
+        },
+        {
+          "text": "Design anti-collusion rules—bid increment minimums, activity requirements, anonymous bidding",
+          "effects": {
+            "evidence": 10,
+            "network": 6,
+            "narrative": 6,
+            "implementation": 14,
+            "impact": 10
+          },
+          "nextDecision": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "yearRange": "1994-1995",
+      "title": "The First Auction",
+      "type": "policy_window",
+      "timer": 30,
+      "contextCard": "July 1994: The first nationwide narrowband PCS auction begins. 99 licenses, 30 bidders, billions at stake. Your simultaneous ascending auction design is being tested in real-time. Industry is watching. Regulators worldwide are watching. If this fails, auction theory loses credibility for a generation.",
+      "choices": [
+        {
+          "text": "Monitor auction closely—ready to advise FCC on any irregularities or strategic gaming",
+          "effects": {
+            "evidence": 8,
+            "network": 10,
+            "narrative": 6,
+            "implementation": 12,
+            "impact": 15
+          },
+          "nextDecision": 4
+        },
+        {
+          "text": "Document everything—prepare rigorous analysis of outcomes, efficiency, revenue for publication",
+          "effects": {
+            "evidence": 12,
+            "network": 6,
+            "narrative": 8,
+            "implementation": 8,
+            "impact": 13
+          },
+          "nextDecision": 4
+        },
+        {
+          "text": "Engage media and policymakers—explain why design choices matter, build public understanding",
+          "effects": {
+            "evidence": 6,
+            "network": 8,
+            "narrative": 12,
+            "implementation": 8,
+            "impact": 14
+          },
+          "nextDecision": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "yearRange": "1995-1996",
+      "title": "Success and Iteration",
+      "type": "simple",
+      "contextCard": "The auctions work! Over $7 billion raised efficiently. Licenses go to bidders who value them most. FCC conducts more auctions—broadband PCS, C-block, D/E/F blocks. But challenges emerge: some winners can't pay, small business set-asides are gamed, and designs need refinement.",
+      "choices": [
+        {
+          "text": "Help FCC refine auction rules—better bid withdrawal penalties, improved activity requirements",
+          "effects": {
+            "evidence": 10,
+            "network": 10,
+            "narrative": 6,
+            "implementation": 12,
+            "impact": 18
+          },
+          "nextDecision": 5
+        },
+        {
+          "text": "Research auction pathologies—collusion, demand reduction, strategic behavior in detail",
+          "effects": {
+            "evidence": 12,
+            "network": 8,
+            "narrative": 8,
+            "implementation": 8,
+            "impact": 16
+          },
+          "nextDecision": 5
+        },
+        {
+          "text": "Internationalize the work—advise European, Asian, Latin American spectrum regulators",
+          "effects": {
+            "evidence": 8,
+            "network": 12,
+            "narrative": 10,
+            "implementation": 10,
+            "impact": 20
+          },
+          "nextDecision": 5
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "yearRange": "2000-2008",
+      "title": "Package Bidding Innovation",
+      "type": "framing_game",
+      "contextCard": "The 'exposure problem' persists—bidders risk winning some licenses in a package but not others. You develop combinatorial auctions allowing package bids. But complexity explodes: with N items, there are 2^N possible packages. Critics say it's too complicated. Supporters say it solves the core problem.",
+      "choices": [
+        {
+          "text": "Develop computationally tractable algorithms—prove combinatorial auctions can scale to real problems",
+          "effects": {
+            "evidence": 14,
+            "network": 6,
+            "narrative": 6,
+            "implementation": 12,
+            "impact": 22
+          },
+          "nextDecision": 6
+        },
+        {
+          "text": "Frame as evolution not revolution—show how package bidding builds on established auction success",
+          "effects": {
+            "evidence": 8,
+            "network": 10,
+            "narrative": 12,
+            "implementation": 10,
+            "impact": 24
+          },
+          "nextDecision": 6
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "yearRange": "2008-2014",
+      "title": "Incentive Auctions",
+      "type": "simple",
+      "contextCard": "The most ambitious design yet: incentive auctions where broadcasters voluntarily sell spectrum to wireless carriers. This requires a two-sided market—reverse auction (buying from broadcasters) and forward auction (selling to carriers). You're designing a market that's never existed before.",
+      "choices": [
+        {
+          "text": "Lead technical design—develop algorithms for matching supply and demand across two-sided auction",
+          "effects": {
+            "evidence": 14,
+            "network": 8,
+            "narrative": 6,
+            "implementation": 14,
+            "impact": 28
+          },
+          "nextDecision": 7
+        },
+        {
+          "text": "Build political coalition—broadcasters, carriers, FCC, Congress all need to support complex redesign",
+          "effects": {
+            "evidence": 8,
+            "network": 14,
+            "narrative": 12,
+            "implementation": 10,
+            "impact": 26
+          },
+          "nextDecision": 7
+        },
+        {
+          "text": "Create simulation tools—let stakeholders understand mechanism before real-money implementation",
+          "effects": {
+            "evidence": 10,
+            "network": 10,
+            "narrative": 10,
+            "implementation": 12,
+            "impact": 27
+          },
+          "nextDecision": 7
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "yearRange": "2016-2017",
+      "title": "The Incentive Auction",
+      "type": "policy_window",
+      "timer": 30,
+      "contextCard": "March 2016: The broadcast incentive auction begins. It will run for nearly a year, multiple stages, unprecedented complexity. $19.8 billion at stake. If it fails, the ambitious two-sided auction concept dies. If it succeeds, market design reaches new heights. The world is watching.",
+      "choices": [
+        {
+          "text": "Provide real-time technical support—help FCC navigate complex auction dynamics as they unfold",
+          "effects": {
+            "evidence": 10,
+            "network": 12,
+            "narrative": 8,
+            "implementation": 14,
+            "impact": 32
+          },
+          "nextDecision": 8
+        },
+        {
+          "text": "Document methodology transparently—show every algorithm, every decision rule, build public trust",
+          "effects": {
+            "evidence": 14,
+            "network": 8,
+            "narrative": 10,
+            "implementation": 10,
+            "impact": 30
+          },
+          "nextDecision": 8
+        },
+        {
+          "text": "Prepare post-auction analysis—ready to defend results and demonstrate efficiency to skeptics",
+          "effects": {
+            "evidence": 12,
+            "network": 10,
+            "narrative": 12,
+            "implementation": 8,
+            "impact": 31
+          },
+          "nextDecision": 8
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "yearRange": "2017-present",
+      "title": "Market Design Vindicated",
+      "type": "simple",
+      "contextCard": "The incentive auction succeeds—clearing 84 MHz of spectrum, reallocating $19.8 billion efficiently. FCC spectrum auctions have now allocated over $200 billion. Your work helps win the 2020 Nobel Prize in Economics. Market design is now recognized as practical, powerful economics. The theory worked.",
+      "choices": [
+        {
+          "text": "Train next generation—teach auction theory and market design to PhD students worldwide",
+          "effects": {
+            "evidence": 10,
+            "network": 12,
+            "narrative": 8,
+            "implementation": 10,
+            "impact": 28
+          },
+          "nextDecision": "end"
+        },
+        {
+          "text": "Apply lessons to new domains—electricity markets, environmental permits, digital advertising",
+          "effects": {
+            "evidence": 12,
+            "network": 10,
+            "narrative": 10,
+            "implementation": 12,
+            "impact": 35
+          },
+          "nextDecision": "end"
+        },
+        {
+          "text": "Document best practices—write definitive guide to auction design for regulators worldwide",
+          "effects": {
+            "evidence": 14,
+            "network": 8,
+            "narrative": 12,
+            "implementation": 14,
+            "impact": 33
+          },
+          "nextDecision": "end"
+        }
+      ]
+    }
+  ]
+}

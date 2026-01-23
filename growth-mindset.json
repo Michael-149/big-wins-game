@@ -1,0 +1,270 @@
+{
+  "id": "growth_mindset",
+  "title": "Growth Mindset in Education",
+  "description": "1978. You're a psychology researcher who believes intelligence isn't fixed—it can grow through effort and learning. Most scientists disagree. Can you prove them wrong and change how millions of students are taught?",
+  "startYear": 1978,
+  "victoryTarget": 500000,
+  "victoryMetric": "students",
+  "decisions": [
+    {
+      "id": 1,
+      "yearRange": "1978-1983",
+      "title": "The Foundation",
+      "contextCard": "You need to build evidence. But you also need allies.",
+      "type": "simple",
+      "choices": [
+        {
+          "text": "Run rigorous long-term studies with careful controls",
+          "effects": {
+            "evidence": 8,
+            "network": -2,
+            "impact": 5000
+          },
+          "nextDecision": 2
+        },
+        {
+          "text": "Engage teachers early with pilot results",
+          "effects": {
+            "evidence": 2,
+            "network": 8,
+            "implementation": 4,
+            "impact": 15000
+          },
+          "nextDecision": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "yearRange": "1984-1990",
+      "title": "Praise Study Results",
+      "contextCard": "Your study shows: kids praised for 'being smart' avoid challenges. Kids praised for 'effort' embrace them. This could change everything.",
+      "type": "simple",
+      "choices": [
+        {
+          "text": "Publish in prestigious academic journals",
+          "effects": {
+            "evidence": 10,
+            "network": 2,
+            "narrative": 2,
+            "impact": 10000
+          },
+          "nextDecision": 3
+        },
+        {
+          "text": "Write for education magazines and practitioner journals",
+          "effects": {
+            "evidence": 4,
+            "network": 8,
+            "narrative": 6,
+            "implementation": 4,
+            "impact": 30000
+          },
+          "nextDecision": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "yearRange": "1991-1995",
+      "title": "Tenure Decision",
+      "contextCard": "Your results are promising but critics question your methods. Your university wants a tenure decision.",
+      "type": "simple",
+      "choices": [
+        {
+          "text": "Go up for tenure now (secure position, less research time)",
+          "effects": {
+            "evidence": 2,
+            "network": 4,
+            "implementation": 2,
+            "impact": 20000
+          },
+          "nextDecision": 4
+        },
+        {
+          "text": "Wait for stronger evidence (risky but more credible)",
+          "effects": {
+            "evidence": 12,
+            "network": -4,
+            "narrative": -2,
+            "impact": 5000
+          },
+          "nextDecision": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "yearRange": "1996-2000",
+      "title": "The Book Opportunity",
+      "contextCard": "A publisher wants you to write a book for teachers and parents. It could reach millions—or undermine your academic credibility.",
+      "type": "simple",
+      "choices": [
+        {
+          "text": "Write the popular book ('Mindset' for general audiences)",
+          "effects": {
+            "evidence": -4,
+            "network": 12,
+            "narrative": 16,
+            "implementation": 6,
+            "impact": 100000
+          },
+          "nextDecision": 5
+        },
+        {
+          "text": "Focus on rigorous academic studies instead",
+          "effects": {
+            "evidence": 12,
+            "network": -2,
+            "narrative": 2,
+            "impact": 15000
+          },
+          "nextDecision": 5
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "yearRange": "2001-2007",
+      "title": "Education Reform Movement",
+      "contextCard": "School districts nationwide want to adopt growth mindset programs. A for-profit company offers to scale fast. This is your policy window—are you ready?",
+      "type": "policy_window",
+      "timer": 30,
+      "choices": [
+        {
+          "text": "Partner with for-profit company (fast reach, less control)",
+          "effects": {
+            "evidence": -6,
+            "network": 8,
+            "implementation": -4,
+            "impact": 150000
+          },
+          "nextDecision": 6
+        },
+        {
+          "text": "Build non-profit infrastructure (slower, quality-focused)",
+          "effects": {
+            "evidence": 4,
+            "network": 6,
+            "implementation": 10,
+            "impact": 80000
+          },
+          "nextDecision": 6
+        },
+        {
+          "text": "Let this opportunity pass—not ready yet",
+          "effects": {
+            "evidence": 2,
+            "network": -8,
+            "narrative": -6,
+            "impact": 10000
+          },
+          "nextDecision": 6
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "yearRange": "2008-2013",
+      "title": "Implementation Crisis",
+      "contextCard": "Schools are botching it. Teachers just tell kids 'try harder!' without changing anything. Your idea is being blamed for bad results.",
+      "type": "simple",
+      "choices": [
+        {
+          "text": "Distance yourself from bad implementations",
+          "effects": {
+            "evidence": 4,
+            "network": -12,
+            "narrative": -8,
+            "implementation": -10,
+            "impact": -50000
+          },
+          "nextDecision": 7
+        },
+        {
+          "text": "Create support organization to fix implementations (PERTS)",
+          "effects": {
+            "evidence": 2,
+            "network": 10,
+            "narrative": 4,
+            "implementation": 14,
+            "impact": 50000
+          },
+          "nextDecision": 7
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "yearRange": "2014-2018",
+      "title": "The Replication Debate",
+      "contextCard": "New meta-analyses show effects are smaller than your original studies suggested. Critics say growth mindset is overhyped.",
+      "type": "simple",
+      "choices": [
+        {
+          "text": "Defend original findings publicly",
+          "effects": {
+            "evidence": -8,
+            "network": 4,
+            "narrative": -6,
+            "impact": 20000
+          },
+          "nextDecision": 8
+        },
+        {
+          "text": "Publicly acknowledge complexity and nuance",
+          "effects": {
+            "evidence": 8,
+            "network": 6,
+            "narrative": 4,
+            "implementation": 4,
+            "impact": 40000
+          },
+          "nextDecision": 8
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "yearRange": "2019-2023",
+      "title": "Legacy",
+      "contextCard": "You've reached 400K students so far. One final push to cross the finish line.",
+      "type": "simple",
+      "choices": [
+        {
+          "text": "Go international (broad reach)",
+          "effects": {
+            "evidence": 2,
+            "network": 8,
+            "narrative": 6,
+            "implementation": -4,
+            "impact": 120000
+          },
+          "nextDecision": "end"
+        },
+        {
+          "text": "Deepen US implementation (higher quality)",
+          "effects": {
+            "evidence": 4,
+            "network": 4,
+            "narrative": 2,
+            "implementation": 10,
+            "impact": 80000
+          },
+          "nextDecision": "end"
+        },
+        {
+          "text": "Train next generation of researchers",
+          "effects": {
+            "evidence": 10,
+            "network": 6,
+            "narrative": 4,
+            "implementation": 6,
+            "impact": 60000
+          },
+          "nextDecision": "end"
+        }
+      ]
+    }
+  ]
+}

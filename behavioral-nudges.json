@@ -1,0 +1,278 @@
+{
+  "id": "behavioral_nudges",
+  "title": "Behavioral Nudges",
+  "description": "1970s. You're discovering that humans don't make decisions rationally. Small changes in how choices are presented can dramatically change behavior. Can you turn cognitive biases into a tool for policy?",
+  "startYear": 1974,
+  "victoryTarget": 50000000,
+  "victoryMetric": "people influenced",
+  "decisions": [
+    {
+      "id": 1,
+      "yearRange": "1974-1980",
+      "title": "Heuristics and Biases",
+      "contextCard": "You've published groundbreaking research on mental shortcuts that lead to predictable errors. But most economists ignore findings that contradict rational choice theory.",
+      "type": "simple",
+      "choices": [
+        {
+          "text": "Keep publishing academic papers, build the evidence base",
+          "effects": {
+            "evidence": 12,
+            "network": 2,
+            "narrative": 2,
+            "impact": 500000
+          },
+          "nextDecision": 2
+        },
+        {
+          "text": "Write accessible books to reach wider audiences",
+          "effects": {
+            "evidence": 4,
+            "network": 8,
+            "narrative": 10,
+            "implementation": 4,
+            "impact": 2000000
+          },
+          "nextDecision": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "yearRange": "1981-1990",
+      "title": "Mental Accounting Discovery",
+      "contextCard": "Your research shows people treat money differently based on mental categories. A $100 tax refund feels like 'found money' and gets spent differently than regular income.",
+      "type": "simple",
+      "choices": [
+        {
+          "text": "Focus on theoretical implications for economics",
+          "effects": {
+            "evidence": 10,
+            "network": 4,
+            "narrative": 2,
+            "impact": 800000
+          },
+          "nextDecision": 3
+        },
+        {
+          "text": "Work with businesses to apply findings to consumer behavior",
+          "effects": {
+            "evidence": 4,
+            "network": 10,
+            "narrative": 8,
+            "implementation": 8,
+            "impact": 3000000
+          },
+          "nextDecision": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "yearRange": "1991-2000",
+      "title": "401(k) Defaults Study",
+      "contextCard": "Researchers find that automatic enrollment in retirement plans increases participation from 46% to 90%. The power of defaults is undeniable.",
+      "type": "simple",
+      "choices": [
+        {
+          "text": "Publish in top economics journals",
+          "effects": {
+            "evidence": 12,
+            "network": 4,
+            "narrative": 4,
+            "impact": 2000000
+          },
+          "nextDecision": 4
+        },
+        {
+          "text": "Brief policymakers and corporate HR departments directly",
+          "effects": {
+            "evidence": 6,
+            "network": 12,
+            "narrative": 8,
+            "implementation": 10,
+            "impact": 5000000
+          },
+          "nextDecision": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "yearRange": "2001-2007",
+      "title": "The Book Opportunity",
+      "contextCard": "You can synthesize decades of research into a popular book. The working title is 'Nudge.' It could reach millions—or risk your academic reputation.",
+      "type": "simple",
+      "choices": [
+        {
+          "text": "Write 'Nudge' for general audiences with clear policy applications",
+          "effects": {
+            "evidence": -2,
+            "network": 14,
+            "narrative": 18,
+            "implementation": 8,
+            "impact": 10000000
+          },
+          "nextDecision": 5
+        },
+        {
+          "text": "Write academic monograph for economists only",
+          "effects": {
+            "evidence": 12,
+            "network": 2,
+            "narrative": 2,
+            "implementation": 2,
+            "impact": 1000000
+          },
+          "nextDecision": 5
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "yearRange": "2008-2010",
+      "title": "UK Government Interest",
+      "contextCard": "'Nudge' becomes a bestseller. The UK Prime Minister wants to create a Behavioural Insights Team to apply your research across government. This is your policy window.",
+      "type": "policy_window",
+      "timer": 30,
+      "choices": [
+        {
+          "text": "Help UK establish the first national 'nudge unit'",
+          "effects": {
+            "evidence": 8,
+            "network": 14,
+            "narrative": 12,
+            "implementation": 16,
+            "impact": 8000000
+          },
+          "nextDecision": 6
+        },
+        {
+          "text": "Focus on US adoption first (home turf)",
+          "effects": {
+            "evidence": 6,
+            "network": 8,
+            "narrative": 6,
+            "implementation": 10,
+            "impact": 6000000
+          },
+          "nextDecision": 6
+        },
+        {
+          "text": "Stay in academia, let others do implementation",
+          "effects": {
+            "evidence": 10,
+            "network": -6,
+            "narrative": -8,
+            "implementation": -12,
+            "impact": 1000000
+          },
+          "nextDecision": 6
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "yearRange": "2011-2014",
+      "title": "Scaling Challenges",
+      "contextCard": "The UK Behavioural Insights Team is showing results. Countries worldwide want to replicate it. But critics say nudges are manipulative paternalism.",
+      "type": "simple",
+      "choices": [
+        {
+          "text": "Build network of government nudge units globally",
+          "effects": {
+            "evidence": 6,
+            "network": 16,
+            "narrative": 10,
+            "implementation": 14,
+            "impact": 12000000
+          },
+          "nextDecision": 7
+        },
+        {
+          "text": "Address ethical concerns with transparency framework",
+          "effects": {
+            "evidence": 10,
+            "network": 8,
+            "narrative": 12,
+            "implementation": 8,
+            "impact": 7000000
+          },
+          "nextDecision": 7
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "yearRange": "2015-2020",
+      "title": "Replication Crisis",
+      "contextCard": "Meta-analyses show nudge effects are smaller and more variable than originally thought. Some interventions fail to replicate. Your credibility is at stake.",
+      "type": "simple",
+      "choices": [
+        {
+          "text": "Defend original findings and methodology",
+          "effects": {
+            "evidence": -6,
+            "network": 2,
+            "narrative": -8,
+            "implementation": -4,
+            "impact": 2000000
+          },
+          "nextDecision": 8
+        },
+        {
+          "text": "Embrace nuance, fund better replication studies",
+          "effects": {
+            "evidence": 12,
+            "network": 10,
+            "narrative": 8,
+            "implementation": 10,
+            "impact": 6000000
+          },
+          "nextDecision": 8
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "yearRange": "2021-2024",
+      "title": "Legislative Victory",
+      "contextCard": "Congress is considering the SECURE 2.0 Act, which would mandate automatic 401(k) enrollment nationwide. Your research will become law.",
+      "type": "simple",
+      "choices": [
+        {
+          "text": "Lobby hard for the legislation",
+          "effects": {
+            "evidence": 4,
+            "network": 12,
+            "narrative": 10,
+            "implementation": 12,
+            "impact": 15000000
+          },
+          "nextDecision": "end"
+        },
+        {
+          "text": "Focus on expanding to new domains (climate, health)",
+          "effects": {
+            "evidence": 8,
+            "network": 10,
+            "narrative": 8,
+            "implementation": 10,
+            "impact": 12000000
+          },
+          "nextDecision": "end"
+        },
+        {
+          "text": "Build second-generation nudge science with AI/tech",
+          "effects": {
+            "evidence": 12,
+            "network": 8,
+            "narrative": 6,
+            "implementation": 8,
+            "impact": 10000000
+          },
+          "nextDecision": "end"
+        }
+      ]
+    }
+  ]
+}

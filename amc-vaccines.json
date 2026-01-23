@@ -1,0 +1,326 @@
+{
+  "id": "amc_vaccines",
+  "title": "Advance Market Commitments for Vaccines",
+  "description": "2004. Pharmaceutical companies won't develop vaccines for diseases affecting only the poor. The market fails because customers can't pay. Can you design a mechanism to make unprofitable vaccines profitable—and save millions of lives?",
+  "startYear": 2004,
+  "victoryTarget": 1000000,
+  "victoryMetric": "lives saved",
+  "decisions": [
+    {
+      "id": 1,
+      "yearRange": "2004-2005",
+      "title": "The Market Failure",
+      "type": "simple",
+      "contextCard": "Pneumococcal disease kills 1 million children annually, mostly in poor countries. Vaccines exist for rich-world strains but not for those prevalent in Africa and Asia. R&D costs $300-700 million. No company will invest because the poor can't pay. Traditional aid is unpredictable. You need a new mechanism.",
+      "choices": [
+        {
+          "text": "Develop theoretical framework—show how advance commitments solve the credible payment problem",
+          "effects": {
+            "evidence": 10,
+            "network": 4,
+            "narrative": 4,
+            "implementation": 6,
+            "impact": 50000
+          },
+          "nextDecision": 2
+        },
+        {
+          "text": "Study pharmaceutical industry incentives—understand exactly what would make vaccine development profitable",
+          "effects": {
+            "evidence": 8,
+            "network": 8,
+            "narrative": 6,
+            "implementation": 8,
+            "impact": 60000
+          },
+          "nextDecision": 2
+        },
+        {
+          "text": "Build coalition with global health advocates—GAVI, WHO, Gates Foundation, MSF",
+          "effects": {
+            "evidence": 6,
+            "network": 10,
+            "narrative": 8,
+            "implementation": 6,
+            "impact": 70000
+          },
+          "nextDecision": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "yearRange": "2005-2006",
+      "title": "Designing the Commitment",
+      "type": "slider_game",
+      "contextCard": "You're designing an Advance Market Commitment (AMC). Donors pre-commit to buy vaccines at a guaranteed price if developed. Key parameters: commitment size, price per dose, eligibility criteria, purchase obligations. Too generous wastes donor money. Too stingy won't incentivize development. Lives depend on getting this right.",
+      "choices": [
+        {
+          "text": "Propose $1.5 billion commitment for pneumococcal vaccine—enough to justify R&D, credible for pharma",
+          "effects": {
+            "evidence": 10,
+            "network": 8,
+            "narrative": 8,
+            "implementation": 12,
+            "impact": 120000
+          },
+          "nextDecision": 3
+        },
+        {
+          "text": "Design tail price mechanism—subsidized initial doses, then lower 'tail' price for long-term supply",
+          "effects": {
+            "evidence": 12,
+            "network": 6,
+            "narrative": 6,
+            "implementation": 14,
+            "impact": 110000
+          },
+          "nextDecision": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "yearRange": "2006-2007",
+      "title": "Building Donor Support",
+      "type": "framing_game",
+      "contextCard": "You need $1.5 billion in donor commitments. This isn't traditional aid—it's a market mechanism. Some donors are skeptical: 'Why guarantee pharma profits?' Others worry about precedent. The framing matters—is this corporate welfare or innovative development finance?",
+      "choices": [
+        {
+          "text": "Frame as smart aid—pays only for results, creates sustainable supply, saves more lives per dollar",
+          "effects": {
+            "evidence": 8,
+            "network": 10,
+            "narrative": 12,
+            "implementation": 8,
+            "impact": 150000
+          },
+          "nextDecision": 4
+        },
+        {
+          "text": "Emphasize risk-sharing—donors and pharma both commit resources, neither bears all risk alone",
+          "effects": {
+            "evidence": 10,
+            "network": 8,
+            "narrative": 10,
+            "implementation": 10,
+            "impact": 140000
+          },
+          "nextDecision": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "yearRange": "2007-2009",
+      "title": "Launch and Wait",
+      "type": "policy_window",
+      "timer": 30,
+      "contextCard": "February 2007: Italy, UK, Canada, Russia, Norway, and Gates Foundation commit $1.5 billion for pneumococcal AMC. Now the wait begins. Will pharmaceutical companies respond? Will they actually develop and test vaccines for developing-world strains? This could take years. Patience and credibility are crucial.",
+      "choices": [
+        {
+          "text": "Maintain donor coalition—ensure commitments remain credible despite political changes",
+          "effects": {
+            "evidence": 6,
+            "network": 12,
+            "narrative": 10,
+            "implementation": 8,
+            "impact": 180000
+          },
+          "nextDecision": 5
+        },
+        {
+          "text": "Engage pharmaceutical companies—provide technical support, reduce regulatory uncertainty",
+          "effects": {
+            "evidence": 8,
+            "network": 10,
+            "narrative": 8,
+            "implementation": 12,
+            "impact": 200000
+          },
+          "nextDecision": 5
+        },
+        {
+          "text": "Build developing country capacity—ensure health systems ready to deliver vaccines when available",
+          "effects": {
+            "evidence": 8,
+            "network": 8,
+            "narrative": 6,
+            "implementation": 14,
+            "impact": 190000
+          },
+          "nextDecision": 5
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "yearRange": "2010-2013",
+      "title": "The Vaccines Arrive",
+      "type": "simple",
+      "contextCard": "It works! Pfizer and GlaxoSmithKline develop pneumococcal conjugate vaccines (PCV) covering developing-world strains. Trials show 90%+ efficacy. WHO pre-qualifies them. GAVI begins procurement through the AMC. The mechanism that was once theoretical is now saving real children's lives.",
+      "choices": [
+        {
+          "text": "Document success rigorously—show how AMC incentivized R&D that wouldn't have occurred otherwise",
+          "effects": {
+            "evidence": 12,
+            "network": 8,
+            "narrative": 10,
+            "implementation": 8,
+            "impact": 250000
+          },
+          "nextDecision": 6
+        },
+        {
+          "text": "Optimize rollout—work with countries to maximize vaccination coverage and impact",
+          "effects": {
+            "evidence": 8,
+            "network": 10,
+            "narrative": 8,
+            "implementation": 14,
+            "impact": 300000
+          },
+          "nextDecision": 6
+        },
+        {
+          "text": "Advocate for AMC expansion—malaria, tuberculosis, other neglected diseases need similar mechanisms",
+          "effects": {
+            "evidence": 8,
+            "network": 12,
+            "narrative": 12,
+            "implementation": 8,
+            "impact": 280000
+          },
+          "nextDecision": 6
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "yearRange": "2014-2018",
+      "title": "Scaling Impact",
+      "type": "simple",
+      "contextCard": "The pneumococcal AMC has delivered over 150 million vaccine doses to 60+ countries. Pneumococcal disease deaths are dropping dramatically. But challenges remain: supply constraints, vaccine hesitancy, cold chain logistics, and questions about long-term sustainability beyond the AMC.",
+      "choices": [
+        {
+          "text": "Research impact rigorously—estimate lives saved, cost-effectiveness, compare to counterfactual",
+          "effects": {
+            "evidence": 12,
+            "network": 8,
+            "narrative": 8,
+            "implementation": 8,
+            "impact": 350000
+          },
+          "nextDecision": 7
+        },
+        {
+          "text": "Address supply bottlenecks—support new manufacturers, technology transfer, competition",
+          "effects": {
+            "evidence": 8,
+            "network": 10,
+            "narrative": 8,
+            "implementation": 14,
+            "impact": 400000
+          },
+          "nextDecision": 7
+        },
+        {
+          "text": "Plan for sustainability—ensure vaccine supply continues after initial AMC commitment expires",
+          "effects": {
+            "evidence": 10,
+            "network": 12,
+            "narrative": 10,
+            "implementation": 12,
+            "impact": 380000
+          },
+          "nextDecision": 7
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "yearRange": "2019-2020",
+      "title": "The COVID Test",
+      "type": "policy_window",
+      "timer": 30,
+      "contextCard": "COVID-19 emerges. The world needs vaccines urgently. Operation Warp Speed and COVAX both use AMC-inspired mechanisms—advance purchase commitments guarantee pharma revenue, incentivizing unprecedented R&D speed. Your decade-old idea is now being deployed at global scale, under unimaginable pressure.",
+      "choices": [
+        {
+          "text": "Advise COVID vaccine initiatives—apply lessons from pneumococcal AMC to emergency context",
+          "effects": {
+            "evidence": 10,
+            "network": 14,
+            "narrative": 10,
+            "implementation": 12,
+            "impact": 450000
+          },
+          "nextDecision": 8
+        },
+        {
+          "text": "Advocate for equitable access—ensure COVAX reaches developing countries, not just rich nations",
+          "effects": {
+            "evidence": 8,
+            "network": 12,
+            "narrative": 14,
+            "implementation": 10,
+            "impact": 480000
+          },
+          "nextDecision": 8
+        },
+        {
+          "text": "Document COVID as AMC validation—show how advance commitments accelerated unprecedented innovation",
+          "effects": {
+            "evidence": 12,
+            "network": 10,
+            "narrative": 12,
+            "implementation": 8,
+            "impact": 430000
+          },
+          "nextDecision": 8
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "yearRange": "2021-present",
+      "title": "Proven Mechanism",
+      "type": "simple",
+      "contextCard": "The pneumococcal AMC has saved an estimated 700,000+ lives. COVID vaccines reached billions in record time, partly due to AMC-style mechanisms. The concept has proven itself at both endemic and pandemic scales. Market design can solve problems traditional aid cannot. The mechanism works.",
+      "choices": [
+        {
+          "text": "Expand to other diseases—advocate for AMCs for tuberculosis, malaria, neglected tropical diseases",
+          "effects": {
+            "evidence": 10,
+            "network": 12,
+            "narrative": 12,
+            "implementation": 12,
+            "impact": 550000
+          },
+          "nextDecision": "end"
+        },
+        {
+          "text": "Apply AMC concept to climate—advance commitments for green technologies, carbon removal, adaptation",
+          "effects": {
+            "evidence": 12,
+            "network": 14,
+            "narrative": 14,
+            "implementation": 10,
+            "impact": 600000
+          },
+          "nextDecision": "end"
+        },
+        {
+          "text": "Train next generation—teach market design for social impact to economists and policymakers worldwide",
+          "effects": {
+            "evidence": 12,
+            "network": 12,
+            "narrative": 12,
+            "implementation": 14,
+            "impact": 580000
+          },
+          "nextDecision": "end"
+        }
+      ]
+    }
+  ]
+}

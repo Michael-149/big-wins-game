@@ -1,0 +1,325 @@
+{
+  "id": "dice_model",
+  "title": "DICE: The Climate Economy Model",
+  "description": "1992. You've built an integrated assessment model linking climate science to economics. Critics say it's too simple. Supporters say it's actionable. Can you balance scientific rigor with policy relevance to shape how the world values climate action?",
+  "startYear": 1992,
+  "victoryTarget": 50,
+  "victoryMetric": "policy applications",
+  "decisions": [
+    {
+      "id": 1,
+      "yearRange": "1992-1994",
+      "title": "Building the Foundation",
+      "type": "simple",
+      "contextCard": "William Nordhaus has developed DICE (Dynamic Integrated Climate-Economy model), linking CO₂ emissions to economic growth and climate damages. The model is controversial—climate scientists say it oversimplifies physics, economists say it's too speculative about damages. You need to establish credibility.",
+      "choices": [
+        {
+          "text": "Publish in top economics journal with rigorous mathematical proofs and sensitivity analysis",
+          "effects": {
+            "evidence": 10,
+            "network": 4,
+            "narrative": 2,
+            "implementation": 4,
+            "impact": 3
+          },
+          "nextDecision": 2
+        },
+        {
+          "text": "Engage climate scientists directly—incorporate their feedback, build interdisciplinary credibility",
+          "effects": {
+            "evidence": 8,
+            "network": 8,
+            "narrative": 4,
+            "implementation": 6,
+            "impact": 4
+          },
+          "nextDecision": 2
+        },
+        {
+          "text": "Focus on policy accessibility—create simplified versions for policymakers and IPCC",
+          "effects": {
+            "evidence": 4,
+            "network": 6,
+            "narrative": 8,
+            "implementation": 8,
+            "impact": 5
+          },
+          "nextDecision": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "yearRange": "1995-1999",
+      "title": "The Discount Rate Debate",
+      "type": "framing_game",
+      "contextCard": "DICE uses a discount rate to value future climate damages. A high rate (5%) makes future damages seem small—justifying modest action today. A low rate (1%) makes them enormous—demanding immediate drastic action. This isn't just math; it's ethics and economics intertwined. How you frame this will shape climate policy for decades.",
+      "choices": [
+        {
+          "text": "Defend market-based discount rates—align with observed savings behavior and economic theory",
+          "effects": {
+            "evidence": 8,
+            "network": 6,
+            "narrative": 10,
+            "implementation": 6,
+            "impact": 6
+          },
+          "nextDecision": 3
+        },
+        {
+          "text": "Emphasize uncertainty—show results across multiple discount rate scenarios",
+          "effects": {
+            "evidence": 10,
+            "network": 8,
+            "narrative": 8,
+            "implementation": 4,
+            "impact": 5
+          },
+          "nextDecision": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "yearRange": "2000-2005",
+      "title": "Damage Function Criticism",
+      "type": "simple",
+      "contextCard": "Critics attack DICE's damage function—the relationship between temperature and economic harm. Current estimates suggest 2-3°C warming reduces GDP by 1-2%. Critics say this vastly underestimates catastrophic risks, tipping points, and non-market damages. The Stern Review will soon challenge your approach fundamentally.",
+      "choices": [
+        {
+          "text": "Defend current estimates—based on peer-reviewed empirical studies, conservative assumptions",
+          "effects": {
+            "evidence": 6,
+            "network": 4,
+            "narrative": 8,
+            "implementation": 4,
+            "impact": 4
+          },
+          "nextDecision": 4
+        },
+        {
+          "text": "Incorporate new research on tipping points, extreme events, and non-market impacts",
+          "effects": {
+            "evidence": 10,
+            "network": 6,
+            "narrative": 6,
+            "implementation": 8,
+            "impact": 7
+          },
+          "nextDecision": 4
+        },
+        {
+          "text": "Develop regional versions—show how climate damages vary dramatically by geography and income",
+          "effects": {
+            "evidence": 8,
+            "network": 8,
+            "narrative": 8,
+            "implementation": 10,
+            "impact": 8
+          },
+          "nextDecision": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "yearRange": "2006-2007",
+      "title": "The Stern Review Challenge",
+      "type": "policy_window",
+      "timer": 30,
+      "contextCard": "Nicholas Stern's review uses near-zero discounting and higher damage estimates, recommending immediate spending of 1% of global GDP on climate action. This contradicts DICE's more modest recommendations. The debate erupts—economists divide, policymakers are confused. How you respond will define your model's credibility.",
+      "choices": [
+        {
+          "text": "Engage respectfully—explain methodological differences, areas of agreement and disagreement",
+          "effects": {
+            "evidence": 10,
+            "network": 8,
+            "narrative": 12,
+            "implementation": 8,
+            "impact": 10
+          },
+          "nextDecision": 5
+        },
+        {
+          "text": "Defend your approach vigorously—show Stern's assumptions are outside economic mainstream",
+          "effects": {
+            "evidence": 8,
+            "network": 6,
+            "narrative": 10,
+            "implementation": 6,
+            "impact": 8
+          },
+          "nextDecision": 5
+        },
+        {
+          "text": "Use controversy to improve DICE—incorporate best critiques while maintaining core framework",
+          "effects": {
+            "evidence": 12,
+            "network": 10,
+            "narrative": 8,
+            "implementation": 12,
+            "impact": 12
+          },
+          "nextDecision": 5
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "yearRange": "2008-2012",
+      "title": "Social Cost of Carbon",
+      "type": "simple",
+      "contextCard": "The Obama administration is developing the Social Cost of Carbon (SCC)—a dollar value for climate damages per ton of CO₂. DICE is one of three IAMs used. Your model will directly influence regulations affecting trillions of dollars in economic activity. This is the policy application you've been building toward.",
+      "choices": [
+        {
+          "text": "Work closely with regulatory agencies—ensure DICE implementation is technically correct and defensible",
+          "effects": {
+            "evidence": 8,
+            "network": 12,
+            "narrative": 6,
+            "implementation": 12,
+            "impact": 12
+          },
+          "nextDecision": 6
+        },
+        {
+          "text": "Publish transparent documentation—make every assumption and calculation reviewable by critics",
+          "effects": {
+            "evidence": 12,
+            "network": 6,
+            "narrative": 10,
+            "implementation": 10,
+            "impact": 10
+          },
+          "nextDecision": 6
+        },
+        {
+          "text": "Build consensus with other IAM modelers—coordinate on methodological standards and uncertainty",
+          "effects": {
+            "evidence": 10,
+            "network": 10,
+            "narrative": 8,
+            "implementation": 10,
+            "impact": 11
+          },
+          "nextDecision": 6
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "yearRange": "2013-2016",
+      "title": "Implementation and Litigation",
+      "type": "slider_game",
+      "contextCard": "The SCC is being used to evaluate regulations for power plants, vehicles, appliances, and methane emissions. Industry groups are suing, claiming the analysis is flawed. Environmental groups are suing, claiming it's too low. You're caught in the middle, defending both the science and the policy process.",
+      "choices": [
+        {
+          "text": "Successfully defend technical methodology in court through rigorous documentation and expert testimony",
+          "effects": {
+            "evidence": 10,
+            "network": 8,
+            "narrative": 10,
+            "implementation": 12,
+            "impact": 13
+          },
+          "nextDecision": 7
+        },
+        {
+          "text": "Continue improving model—address valid critiques while maintaining regulatory continuity",
+          "effects": {
+            "evidence": 12,
+            "network": 6,
+            "narrative": 8,
+            "implementation": 10,
+            "impact": 12
+          },
+          "nextDecision": 7
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "yearRange": "2017-2020",
+      "title": "Political Whiplash",
+      "type": "simple",
+      "contextCard": "The Trump administration slashes the SCC from $50 to $1-7 per ton by excluding global damages and using higher discount rates. Years of work undermined by political decision. But the National Academies is reviewing IAM methodology, and states are developing their own carbon pricing. The work continues.",
+      "choices": [
+        {
+          "text": "Support National Academies review—ensure next-generation methodology incorporates latest science",
+          "effects": {
+            "evidence": 12,
+            "network": 10,
+            "narrative": 6,
+            "implementation": 8,
+            "impact": 9
+          },
+          "nextDecision": 8
+        },
+        {
+          "text": "Work with state and local governments—provide technical assistance for regional carbon pricing",
+          "effects": {
+            "evidence": 8,
+            "network": 12,
+            "narrative": 8,
+            "implementation": 12,
+            "impact": 11
+          },
+          "nextDecision": 8
+        },
+        {
+          "text": "Build international network—share methodology with EU, Canada, other countries developing carbon pricing",
+          "effects": {
+            "evidence": 10,
+            "network": 12,
+            "narrative": 10,
+            "implementation": 10,
+            "impact": 13
+          },
+          "nextDecision": 8
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "yearRange": "2021-present",
+      "title": "Legacy and Evolution",
+      "type": "simple",
+      "contextCard": "Biden administration restores robust SCC ($51/ton in 2020 dollars). DICE has been cited 15,000+ times, used in countless policy analyses. New challenges emerge: How to model post-2100 damages? How to incorporate equity and justice? How to handle deep uncertainty? The model evolves, but the core insight remains—climate policy is economics.",
+      "choices": [
+        {
+          "text": "Mentor next generation of IAM modelers—ensure methodology continues improving after you",
+          "effects": {
+            "evidence": 10,
+            "network": 12,
+            "narrative": 8,
+            "implementation": 10,
+            "impact": 12
+          },
+          "nextDecision": "end"
+        },
+        {
+          "text": "Focus on fundamental research—address deep uncertainties in climate sensitivity and damage functions",
+          "effects": {
+            "evidence": 14,
+            "network": 8,
+            "narrative": 6,
+            "implementation": 8,
+            "impact": 10
+          },
+          "nextDecision": "end"
+        },
+        {
+          "text": "Make model transparent and accessible—open-source implementation, educational materials, workshops",
+          "effects": {
+            "evidence": 8,
+            "network": 10,
+            "narrative": 12,
+            "implementation": 14,
+            "impact": 15
+          },
+          "nextDecision": "end"
+        }
+      ]
+    }
+  ]
+}

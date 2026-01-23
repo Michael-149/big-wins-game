@@ -1,0 +1,280 @@
+{
+  "id": "needle_exchange",
+  "title": "Syringe Services Programs",
+  "description": "1986. HIV/AIDS is killing thousands. Injection drug users account for 40% of cases. You believe needle exchange can save lives, but it's illegal and politically toxic. Can you prove a controversial harm reduction strategy works?",
+  "startYear": 1986,
+  "victoryTarget": 100000,
+  "victoryMetric": "infections prevented",
+  "decisions": [
+    {
+      "id": 1,
+      "yearRange": "1986-1988",
+      "title": "Underground Beginnings",
+      "contextCard": "HIV is spreading rapidly through shared needles. Needle exchange is illegal in most states. Some activists are starting underground programs.",
+      "type": "simple",
+      "choices": [
+        {
+          "text": "Start illegal underground exchange (high risk, immediate impact)",
+          "effects": {
+            "evidence": -4,
+            "network": 10,
+            "narrative": 6,
+            "implementation": 8,
+            "impact": 15000
+          },
+          "nextDecision": 2
+        },
+        {
+          "text": "Build coalition first, wait for legal permission",
+          "effects": {
+            "evidence": 4,
+            "network": 6,
+            "narrative": 4,
+            "impact": 2000
+          },
+          "nextDecision": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "yearRange": "1989-1991",
+      "title": "The New Haven Study",
+      "contextCard": "Connecticut authorizes a 1-year experimental program in New Haven. This is your chance to prove needle exchange works with rigorous science.",
+      "type": "simple",
+      "choices": [
+        {
+          "text": "Design rigorous evaluation with mathematical modeling",
+          "effects": {
+            "evidence": 12,
+            "network": 4,
+            "narrative": 2,
+            "implementation": 6,
+            "impact": 8000
+          },
+          "nextDecision": 3
+        },
+        {
+          "text": "Focus on rapid scale-up, less rigorous evaluation",
+          "effects": {
+            "evidence": 2,
+            "network": 8,
+            "narrative": 4,
+            "implementation": 10,
+            "impact": 18000
+          },
+          "nextDecision": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "yearRange": "1992-1994",
+      "title": "Breakthrough Results",
+      "contextCard": "Your study shows 33% reduction in HIV infections. NYC and multiple cities want to adopt programs. But Congress just banned federal funding for needle exchange.",
+      "type": "simple",
+      "choices": [
+        {
+          "text": "Lobby Congress to overturn the funding ban",
+          "effects": {
+            "evidence": 2,
+            "network": 6,
+            "narrative": -4,
+            "implementation": -2,
+            "impact": 5000
+          },
+          "nextDecision": 4
+        },
+        {
+          "text": "Help cities implement with local funds instead",
+          "effects": {
+            "evidence": 4,
+            "network": 10,
+            "narrative": 6,
+            "implementation": 12,
+            "impact": 20000
+          },
+          "nextDecision": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "yearRange": "1995-1998",
+      "title": "Scientific Consensus",
+      "contextCard": "The National Academy of Medicine declares needle exchange reduces HIV without increasing drug use. But political opposition remains fierce.",
+      "type": "simple",
+      "choices": [
+        {
+          "text": "Launch national media campaign with evidence",
+          "effects": {
+            "evidence": 4,
+            "network": 2,
+            "narrative": 12,
+            "implementation": 2,
+            "impact": 12000
+          },
+          "nextDecision": 5
+        },
+        {
+          "text": "Work quietly city-by-city to avoid backlash",
+          "effects": {
+            "evidence": 6,
+            "network": 8,
+            "narrative": -2,
+            "implementation": 10,
+            "impact": 18000
+          },
+          "nextDecision": 5
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "yearRange": "1999-2005",
+      "title": "Slow Growth Era",
+      "contextCard": "Programs are spreading despite funding ban. HIV rates are dropping where exchanges operate. Private foundations offer major funding.",
+      "type": "simple",
+      "choices": [
+        {
+          "text": "Accept foundation money to scale rapidly",
+          "effects": {
+            "evidence": 2,
+            "network": 10,
+            "narrative": 4,
+            "implementation": 8,
+            "impact": 25000
+          },
+          "nextDecision": 6
+        },
+        {
+          "text": "Stay grassroots, maintain community control",
+          "effects": {
+            "evidence": 4,
+            "network": 6,
+            "narrative": 2,
+            "implementation": 6,
+            "impact": 15000
+          },
+          "nextDecision": 6
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "yearRange": "2006-2014",
+      "title": "The Opioid Crisis Arrives",
+      "contextCard": "Prescription opioid addiction is exploding. HIV outbreaks are erupting in rural areas with no needle exchanges. This is changing the politics.",
+      "type": "simple",
+      "choices": [
+        {
+          "text": "Pivot to focus on opioid epidemic",
+          "effects": {
+            "evidence": 6,
+            "network": 8,
+            "narrative": 10,
+            "implementation": 8,
+            "impact": 18000
+          },
+          "nextDecision": 7
+        },
+        {
+          "text": "Continue urban HIV focus (don't dilute mission)",
+          "effects": {
+            "evidence": 8,
+            "network": -4,
+            "narrative": -6,
+            "implementation": 4,
+            "impact": 12000
+          },
+          "nextDecision": 7
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "yearRange": "2015",
+      "title": "Indiana Outbreak - Policy Window Opens",
+      "contextCard": "Scott County, Indiana: 235 HIV cases in 4 months from opioid injection. Conservative Governor Mike Pence, a needle exchange opponent, is under pressure. This is your moment.",
+      "type": "policy_window",
+      "timer": 30,
+      "choices": [
+        {
+          "text": "Offer immediate technical assistance to Indiana",
+          "effects": {
+            "evidence": 8,
+            "network": 12,
+            "narrative": 14,
+            "implementation": 14,
+            "impact": 40000
+          },
+          "nextDecision": 8
+        },
+        {
+          "text": "Demand they follow your model exactly",
+          "effects": {
+            "evidence": 4,
+            "network": -8,
+            "narrative": -6,
+            "implementation": 4,
+            "impact": 15000
+          },
+          "nextDecision": 8
+        },
+        {
+          "text": "Wait for federal government to act",
+          "effects": {
+            "evidence": 2,
+            "network": -12,
+            "narrative": -10,
+            "implementation": -8,
+            "impact": 5000
+          },
+          "nextDecision": 8
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "yearRange": "2016-2024",
+      "title": "Federal Funding Breakthrough",
+      "contextCard": "Indiana's success moved Congress. In 2016, federal funds can now support needle exchange operations (but not purchase needles directly). Programs are spreading nationwide.",
+      "type": "simple",
+      "choices": [
+        {
+          "text": "Build national infrastructure for rapid scale-up",
+          "effects": {
+            "evidence": 6,
+            "network": 12,
+            "narrative": 8,
+            "implementation": 14,
+            "impact": 50000
+          },
+          "nextDecision": "end"
+        },
+        {
+          "text": "Focus on program quality and fidelity",
+          "effects": {
+            "evidence": 10,
+            "network": 6,
+            "narrative": 4,
+            "implementation": 12,
+            "impact": 35000
+          },
+          "nextDecision": "end"
+        },
+        {
+          "text": "Integrate with broader addiction treatment",
+          "effects": {
+            "evidence": 8,
+            "network": 10,
+            "narrative": 10,
+            "implementation": 10,
+            "impact": 45000
+          },
+          "nextDecision": "end"
+        }
+      ]
+    }
+  ]
+}
