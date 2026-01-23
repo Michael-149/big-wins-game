@@ -17,7 +17,7 @@ export interface Decision {
   timer?: number;
   choices: Choice[];
   // For framing game
-  categories?: FramingCategory[];
+  words?: string[];
   // For slider game
   sliders?: SliderParameter[];
 }
@@ -26,6 +26,8 @@ export interface Choice {
   text: string;
   effects: MeterEffects;
   nextDecision: number | "end";
+  // For framing game - keywords that map to this choice
+  keywords?: string[];
 }
 
 export interface MeterEffects {
@@ -34,11 +36,6 @@ export interface MeterEffects {
   narrative?: number;
   implementation?: number;
   impact?: number;
-}
-
-export interface FramingCategory {
-  category: string;
-  words: string[];
 }
 
 export interface SliderParameter {

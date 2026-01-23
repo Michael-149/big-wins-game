@@ -54,9 +54,11 @@
       "title": "EPA's Flexible Regulation",
       "type": "framing_game",
       "contextCard": "The EPA has introduced emissions 'credits' (1979), 'banking' to smooth price volatility (1980), and limited inter-firm trading. But there's resistance: EPA staff trained in command-and-control methods are skeptical. Environmental NGOs view selling pollution rights as ethically problematic. The language matters—how you frame this will determine acceptance.",
+      "words": ["allowances", "caps", "limits", "flexible", "cost-effective", "savings", "efficient", "evidence", "trading"],
       "choices": [
         {
           "text": "Reframe as 'allowances' not 'rights,' emphasize overall emissions caps",
+          "keywords": ["allowances", "caps", "limits"],
           "effects": {
             "evidence": 4,
             "network": 6,
@@ -68,6 +70,7 @@
         },
         {
           "text": "Document cost savings rigorously—show society saves money while reducing pollution",
+          "keywords": ["cost-effective", "savings", "efficient", "evidence"],
           "effects": {
             "evidence": 10,
             "network": 4,
