@@ -1,7 +1,7 @@
 # Project Status
 
 ## Current Phase
-Phase 2: Core Game Loop ✅
+Phase 3: Scenarios & Data ✅
 
 ## Completed
 
@@ -24,19 +24,50 @@ Phase 2: Core Game Loop ✅
 - [x] Simple end screen with replay functionality
 - [x] Build tested and verified
 
+### Phase 3: Scenarios & Data ✅
+- [x] Scenario metadata file with 8 scenarios organized by levels
+- [x] Progress store with localStorage persistence (`src/stores/useProgressStore.ts`)
+- [x] ScenarioCard component with lock states and grade badges
+- [x] ScenarioSelector component with 3 difficulty levels
+- [x] Level progression system (Level 2 unlocks after 2 Level 1 completions, etc.)
+- [x] EndScreen component with grading algorithm (F to A+)
+- [x] Full scenario selection and completion tracking
+- [x] App.tsx updated with menu/playing/ended screens
+- [x] Build tested and verified
+
 ## In Progress
 None
 
 ## Next Steps
-1. Begin Phase 3: Scenarios & Data
-   - Create ScenarioSelector component
-   - Import all 8 scenario JSON files
-   - Implement progression/unlock system (Level 1, 2, 3)
-   - Create Zustand progress store with localStorage persistence
-2. Test responsive design at 320px, 768px, and 1200px
+1. Begin Phase 4: Mini-Games & Special Decision Types
+   - Implement PolicyWindow timer mechanic
+   - Create FramingGame component
+   - Create SliderGame component
+   - Integrate mini-games into DecisionCard
+2. Phase 5: Polish & Responsive Design
+   - Test responsive design at 320px, 768px, and 1200px
+   - Add animations and transitions
+   - Polish UI/UX
+3. Deploy to production
+
+## Game Features Implemented
+
+**Progression System:**
+- 8 scenarios across 3 difficulty levels
+- Unlock progression (complete 2+ scenarios to unlock next level)
+- Grade tracking (F, D, C, B, A, A+)
+- localStorage persistence of progress
+- Best score tracking per scenario
+
+**Gameplay:**
+- Scenario selection menu with lock states
+- Decision-making with 4 resource meters
+- Impact tracking toward victory targets
+- Grading based on % of goal achieved
+- Replay and scenario switching
 
 ## Known Issues
 None
 
 ## Last Updated
-2026-01-23 - Phase 2 Core Game Loop Complete
+2026-01-23 - Phase 3 Scenarios & Data Complete
