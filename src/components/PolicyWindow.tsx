@@ -8,7 +8,7 @@ interface PolicyWindowProps {
 }
 
 export function PolicyWindow({ decision, onChoice }: PolicyWindowProps) {
-  const timerDuration = decision.timer || 30;
+  const timerDuration = decision.timer || 20;
   const [timeRemaining, setTimeRemaining] = useState(timerDuration);
   const [hasChosen, setHasChosen] = useState(false);
 

@@ -9,12 +9,6 @@ interface ScenarioCardProps {
   onSelect: () => void;
 }
 
-const difficultyColors = {
-  Easy: 'bg-green-100 text-green-700',
-  Medium: 'bg-yellow-100 text-yellow-700',
-  Hard: 'bg-red-100 text-red-700',
-};
-
 const gradeColors: Record<string, string> = {
   'A+': 'bg-purple-100 text-purple-700 border-purple-300',
   'A': 'bg-blue-100 text-blue-700 border-blue-300',
@@ -43,7 +37,7 @@ export function ScenarioCard({ scenario, completion, isLocked, onSelect }: Scena
         {/* Header */}
         <div className="flex justify-between items-start mb-3">
           <div className="flex-1">
-            <h3 className="block text-xl font-bold text-text-dark mb-1">
+            <h3 className="block text-xl font-bold text-text-dark">
               {isLocked ? (
                 <span className="flex items-center gap-2">
                   <span>🔒</span>
@@ -53,9 +47,6 @@ export function ScenarioCard({ scenario, completion, isLocked, onSelect }: Scena
                 scenario.data.title
               )}
             </h3>
-            <p className="block text-sm text-text-secondary">
-              {scenario.estimatedTime}
-            </p>
           </div>
 
           {/* Grade badge if completed */}
@@ -71,16 +62,6 @@ export function ScenarioCard({ scenario, completion, isLocked, onSelect }: Scena
           {scenario.data.description}
         </p>
 
-        {/* Metadata badges */}
-        <div className="flex flex-wrap gap-2 mb-3">
-          <span className={`text-xs px-2 py-1 rounded ${difficultyColors[scenario.difficulty]}`}>
-            {scenario.difficulty}
-          </span>
-          <span className="text-xs px-2 py-1 rounded bg-primary/10 text-primary">
-            Level {scenario.level}
-          </span>
-        </div>
-
         {/* Tags */}
         <div className="flex flex-wrap gap-2">
           {scenario.tags.map((tag) => (
@@ -92,13 +73,6 @@ export function ScenarioCard({ scenario, completion, isLocked, onSelect }: Scena
             </span>
           ))}
         </div>
-
-        {/* Play count if exists */}
-        {completion && completion.playCount > 0 && !isLocked && (
-          <p className="block text-xs text-text-secondary mt-3">
-            Played {completion.playCount} time{completion.playCount > 1 ? 's' : ''}
-          </p>
-        )}
       </div>
     </motion.button>
   );

@@ -3,6 +3,8 @@ import { ImpactCounter } from './components/ImpactCounter';
 import { MeterPanel } from './components/MeterPanel';
 import { DecisionCard } from './components/DecisionCard';
 import { PolicyWindow } from './components/PolicyWindow';
+import { FramingGame } from './components/FramingGame';
+import { SliderGame } from './components/SliderGame';
 import { ScenarioSelector } from './components/ScenarioSelector';
 import { EndScreen, calculateGrade } from './components/EndScreen';
 import { useGameState } from './stores/useGameState';
@@ -130,8 +132,12 @@ export default function App() {
                 // Render appropriate decision type
                 currentDecision.type === 'policy_window' ? (
                   <PolicyWindow decision={currentDecision} onChoice={handleChoice} />
+                ) : currentDecision.type === 'framing_game' ? (
+                  <FramingGame decision={currentDecision} onChoice={handleChoice} />
+                ) : currentDecision.type === 'slider_game' ? (
+                  <SliderGame decision={currentDecision} onChoice={handleChoice} />
                 ) : (
-                  // Default to DecisionCard for simple, framing_game, and slider_game
+                  // Default to DecisionCard for simple
                   <DecisionCard decision={currentDecision} onChoice={handleChoice} />
                 )
               ) : (

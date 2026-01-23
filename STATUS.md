@@ -1,7 +1,7 @@
 # Project Status
 
 ## Current Phase
-Phase 4: Decision Type Mechanics ✅
+Phase 5: Complete ✅ - READY FOR DEPLOYMENT
 
 ## Completed
 
@@ -43,20 +43,30 @@ Phase 4: Decision Type Mechanics ✅
 - [x] Integrated with existing scenarios (Behavioral Nudges, Moving to Opportunity)
 - [x] Build tested and verified
 
+### Phase 5: Mini-Games & Polish ✅
+- [x] Policy window timer reduced to 20 seconds (from 30)
+- [x] Resource meter emojis added (📊 Evidence, 🤝 Network, 💬 Narrative, ⚙️ Implementation)
+- [x] Homepage simplified - removed difficulty/level badges, time estimates, play count
+- [x] New engaging subtitle: "Will you be able to navigate decades of decisions, build evidence, form coalitions, and turn ideas into impact?"
+- [x] FramingGame component - word selection mechanic (select up to 3 words from 9)
+- [x] SliderGame component - parameter tuning with optimal ranges
+- [x] Updated Decision types to support framing/slider games
+- [x] Added framing word lists to scenarios (Emissions Trading, FCC Spectrum, AMC Vaccines)
+- [x] Added slider configurations to scenarios (Moving to Opportunity, FCC Spectrum, AMC Vaccines)
+- [x] App.tsx routing updated to handle all 4 decision types
+- [x] Build tested and verified
+
 ## In Progress
 None
 
 ## Next Steps
-1. Phase 5: Polish & Responsive Design
-   - Test responsive design at 320px, 768px, and 1200px
-   - Add loading states and smooth transitions
-   - Polish UI/UX details
-   - Add sound effects (optional)
-2. Advanced Features (Future)
-   - FramingGame component with word selection mechanic
-   - SliderGame component with parameter tuning
-   - Update scenario data to use advanced mini-games
-3. Deploy to production and collect feedback
+1. Merge to main branch for deployment
+2. Test on deployed GitHub Pages
+3. Collect user feedback
+4. Future enhancements:
+   - Responsive design testing at 320px, 768px, and 1200px
+   - Sound effects (optional)
+   - Additional scenarios
 
 ## Game Features Implemented
 
@@ -69,21 +79,36 @@ None
 
 **Gameplay:**
 - Scenario selection menu with lock states
-- Decision-making with 4 resource meters
+- Decision-making with 4 resource meters (with emojis!)
 - Impact tracking toward victory targets
 - Grading based on % of goal achieved
 - Replay and scenario switching
 
 **Decision Types:**
-- Simple decisions: Standard choice-based gameplay
-- Policy Window: Timed decisions with urgency indicators
-  - 30-second countdown timer
-  - Color-coded urgency (green → yellow → red)
-  - Auto-selects last choice if time expires
-  - Used in high-stakes policy moments
+1. **Simple decisions**: Standard choice-based gameplay
+2. **Policy Window**: Timed decisions with urgency indicators
+   - 20-second countdown timer
+   - Color-coded urgency (green → yellow → red)
+   - Auto-selects last choice if time expires
+   - Teaches: timing matters in policy windows
+3. **Framing Game**: Word selection mechanic
+   - Select up to 3 words from 9 options
+   - Word choices determine narrative framing
+   - Teaches: same research, different framing = different reception
+4. **Slider Game**: Parameter tuning mechanic
+   - Adjust 3-4 sliders to optimal ranges
+   - Score based on how many parameters are optimal
+   - Teaches: implementation details determine success
+
+**Scenarios with Mini-Games:**
+- Emissions Trading (framing game)
+- FCC Spectrum (framing + slider game)
+- AMC Vaccines (framing + slider game)
+- Moving to Opportunity (slider game)
+- Behavioral Nudges (policy window)
 
 ## Known Issues
 None
 
 ## Last Updated
-2026-01-23 - Phase 4 Decision Type Mechanics Complete
+2026-01-23 - Phase 5 Complete - All Mini-Games Implemented

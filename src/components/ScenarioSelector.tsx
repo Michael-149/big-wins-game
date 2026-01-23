@@ -26,8 +26,8 @@ export function ScenarioSelector({ onSelectScenario }: ScenarioSelectorProps) {
         <h1 className="block text-4xl font-bold text-primary mb-2">
           Big Wins: The Game
         </h1>
-        <p className="block text-lg text-text-secondary">
-          Choose a scenario to play
+        <p className="block text-lg text-text-secondary max-w-3xl mx-auto">
+          Will you be able to navigate decades of decisions, build evidence, form coalitions, and turn ideas into impact? Choose your scenario.
         </p>
       </div>
 

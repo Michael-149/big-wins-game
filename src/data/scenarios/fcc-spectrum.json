@@ -54,6 +54,36 @@
       "title": "Designing the Mechanism",
       "type": "slider_game",
       "contextCard": "You're designing the first major US spectrum auction. Key questions: Simultaneous or sequential? Sealed bid or ascending? How to prevent collusion? How to handle license complementarities—bidders want combinations, not isolated licenses. Get this wrong and billions are misallocated. Get it right and you prove market design works.",
+      "sliders": [
+        {
+          "label": "Bid Increment Minimum (%)",
+          "min": 1,
+          "max": 20,
+          "targetMin": 5,
+          "targetMax": 10
+        },
+        {
+          "label": "Activity Requirement (%)",
+          "min": 50,
+          "max": 100,
+          "targetMin": 80,
+          "targetMax": 95
+        },
+        {
+          "label": "Information Transparency (1-10 scale)",
+          "min": 1,
+          "max": 10,
+          "targetMin": 6,
+          "targetMax": 9
+        },
+        {
+          "label": "Rounds Between Pauses",
+          "min": 3,
+          "max": 15,
+          "targetMin": 8,
+          "targetMax": 12
+        }
+      ],
       "choices": [
         {
           "text": "Propose simultaneous multiple round auction—bidders see prices, can switch licenses, reduces winner's curse",
@@ -170,9 +200,11 @@
       "title": "Package Bidding Innovation",
       "type": "framing_game",
       "contextCard": "The 'exposure problem' persists—bidders risk winning some licenses in a package but not others. You develop combinatorial auctions allowing package bids. But complexity explodes: with N items, there are 2^N possible packages. Critics say it's too complicated. Supporters say it solves the core problem.",
+      "words": ["algorithms", "scalable", "computational", "proof", "evolution", "established", "builds", "continuity", "auction"],
       "choices": [
         {
           "text": "Develop computationally tractable algorithms—prove combinatorial auctions can scale to real problems",
+          "keywords": ["algorithms", "scalable", "computational", "proof"],
           "effects": {
             "evidence": 14,
             "network": 6,
@@ -184,6 +216,7 @@
         },
         {
           "text": "Frame as evolution not revolution—show how package bidding builds on established auction success",
+          "keywords": ["evolution", "established", "builds", "continuity"],
           "effects": {
             "evidence": 8,
             "network": 10,

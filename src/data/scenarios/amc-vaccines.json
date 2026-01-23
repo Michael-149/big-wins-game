@@ -54,6 +54,36 @@
       "title": "Designing the Commitment",
       "type": "slider_game",
       "contextCard": "You're designing an Advance Market Commitment (AMC). Donors pre-commit to buy vaccines at a guaranteed price if developed. Key parameters: commitment size, price per dose, eligibility criteria, purchase obligations. Too generous wastes donor money. Too stingy won't incentivize development. Lives depend on getting this right.",
+      "sliders": [
+        {
+          "label": "Total Commitment Size ($M)",
+          "min": 500,
+          "max": 3000,
+          "targetMin": 1300,
+          "targetMax": 1700
+        },
+        {
+          "label": "Price per Dose ($)",
+          "min": 1,
+          "max": 15,
+          "targetMin": 5,
+          "targetMax": 9
+        },
+        {
+          "label": "Minimum Purchase Guarantee (million doses)",
+          "min": 50,
+          "max": 300,
+          "targetMin": 150,
+          "targetMax": 250
+        },
+        {
+          "label": "Country Co-payment (%)",
+          "min": 0,
+          "max": 50,
+          "targetMin": 10,
+          "targetMax": 25
+        }
+      ],
       "choices": [
         {
           "text": "Propose $1.5 billion commitment for pneumococcal vaccine—enough to justify R&D, credible for pharma",
@@ -85,9 +115,11 @@
       "title": "Building Donor Support",
       "type": "framing_game",
       "contextCard": "You need $1.5 billion in donor commitments. This isn't traditional aid—it's a market mechanism. Some donors are skeptical: 'Why guarantee pharma profits?' Others worry about precedent. The framing matters—is this corporate welfare or innovative development finance?",
+      "words": ["results", "sustainable", "efficient", "cost-effective", "risk-sharing", "partnership", "commitment", "mutual", "innovation"],
       "choices": [
         {
           "text": "Frame as smart aid—pays only for results, creates sustainable supply, saves more lives per dollar",
+          "keywords": ["results", "sustainable", "efficient", "cost-effective"],
           "effects": {
             "evidence": 8,
             "network": 10,
@@ -99,6 +131,7 @@
         },
         {
           "text": "Emphasize risk-sharing—donors and pharma both commit resources, neither bears all risk alone",
+          "keywords": ["risk-sharing", "partnership", "commitment", "mutual"],
           "effects": {
             "evidence": 10,
             "network": 8,
