@@ -1,7 +1,7 @@
 # Project Status
 
 ## Current Phase
-Phase 3: Scenarios & Data ✅
+Phase 4: Decision Type Mechanics ✅
 
 ## Completed
 
@@ -35,20 +35,28 @@ Phase 3: Scenarios & Data ✅
 - [x] App.tsx updated with menu/playing/ended screens
 - [x] Build tested and verified
 
+### Phase 4: Decision Type Mechanics ✅
+- [x] PolicyWindow component with countdown timer
+- [x] Timer urgency indicator (color changes as time depletes)
+- [x] Auto-selection when timer expires
+- [x] App.tsx routing based on decision type
+- [x] Integrated with existing scenarios (Behavioral Nudges, Moving to Opportunity)
+- [x] Build tested and verified
+
 ## In Progress
 None
 
 ## Next Steps
-1. Begin Phase 4: Mini-Games & Special Decision Types
-   - Implement PolicyWindow timer mechanic
-   - Create FramingGame component
-   - Create SliderGame component
-   - Integrate mini-games into DecisionCard
-2. Phase 5: Polish & Responsive Design
+1. Phase 5: Polish & Responsive Design
    - Test responsive design at 320px, 768px, and 1200px
-   - Add animations and transitions
-   - Polish UI/UX
-3. Deploy to production
+   - Add loading states and smooth transitions
+   - Polish UI/UX details
+   - Add sound effects (optional)
+2. Advanced Features (Future)
+   - FramingGame component with word selection mechanic
+   - SliderGame component with parameter tuning
+   - Update scenario data to use advanced mini-games
+3. Deploy to production and collect feedback
 
 ## Game Features Implemented
 
@@ -66,8 +74,16 @@ None
 - Grading based on % of goal achieved
 - Replay and scenario switching
 
+**Decision Types:**
+- Simple decisions: Standard choice-based gameplay
+- Policy Window: Timed decisions with urgency indicators
+  - 30-second countdown timer
+  - Color-coded urgency (green → yellow → red)
+  - Auto-selects last choice if time expires
+  - Used in high-stakes policy moments
+
 ## Known Issues
 None
 
 ## Last Updated
-2026-01-23 - Phase 3 Scenarios & Data Complete
+2026-01-23 - Phase 4 Decision Type Mechanics Complete
