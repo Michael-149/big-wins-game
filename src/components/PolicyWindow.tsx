@@ -11,12 +11,18 @@ export function PolicyWindow({ decision, onChoice }: PolicyWindowProps) {
   const timerDuration = decision.timer || 20;
   const [timeRemaining, setTimeRemaining] = useState(timerDuration);
   const [hasChosen, setHasChosen] = useState(false);
+  const [selectedChoice, setSelectedChoice] = useState<number | null>(null);
 
   useEffect(() => {
     if (timeRemaining <= 0 && !hasChosen) {
       // Auto-select last choice when timer expires
-      onChoice(decision.choices.length - 1);
+      const lastChoiceIndex = decision.choices.length - 1;
+      setSelectedChoice(lastChoiceIndex);
       setHasChosen(true);
+
+      setTimeout(() => {
+        onChoice(lastChoiceIndex);
+      }, 1000);
       return;
     }
 
@@ -30,7 +36,12 @@ export function PolicyWindow({ decision, onChoice }: PolicyWindowProps) {
   const handleChoice = (choiceIndex: number) => {
     if (!hasChosen) {
       setHasChosen(true);
-      onChoice(choiceIndex);
+      setSelectedChoice(choiceIndex);
+
+      // Add a short delay before transitioning to show selection
+      setTimeout(() => {
+        onChoice(choiceIndex);
+      }, 800);
     }
   };
 
@@ -106,53 +117,74 @@ export function PolicyWindow({ decision, onChoice }: PolicyWindowProps) {
           </p>
         </div>
 
+        {/* Result Preview (shown after selection) */}
+        {hasChosen && selectedChoice !== null && (
+          <motion.div
+            className="block mb-6 p-4 bg-green-50 border border-green-200 rounded-lg"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <p className="block text-sm font-medium text-green-800 mb-2">
+              Decision made!
+            </p>
+            <p className="block text-sm text-green-700">
+              {decision.choices[selectedChoice].text}
+            </p>
+          </motion.div>
+        )}
+
         {/* Choices */}
         <div className="block space-y-3">
-          {decision.choices.map((choice, index) => (
-            <motion.button
-              key={index}
-              onClick={() => handleChoice(index)}
-              disabled={hasChosen}
-              className={`
-                block w-full text-left p-4 border-2 rounded-lg transition-all duration-200
-                ${hasChosen
-                  ? 'border-gray-300 bg-gray-100 cursor-not-allowed opacity-60'
-                  : 'border-border hover:border-primary hover:bg-primary/5 cursor-pointer'
-                }
-              `}
-              whileHover={hasChosen ? {} : { scale: 1.02 }}
-              whileTap={hasChosen ? {} : { scale: 0.98 }}
-            >
-              <div className="block">
-                <p className="block text-base font-medium text-text-dark">
-                  {choice.text}
-                </p>
-                {/* Effect hints */}
-                <div className="block mt-2 flex flex-wrap gap-2">
-                  {choice.effects.evidence && (
-                    <span className={`text-xs px-2 py-1 rounded ${choice.effects.evidence > 0 ? 'bg-blue-100 text-blue-700' : 'bg-red-100 text-red-700'}`}>
-                      Evidence {choice.effects.evidence > 0 ? '+' : ''}{choice.effects.evidence}
-                    </span>
-                  )}
-                  {choice.effects.network && (
-                    <span className={`text-xs px-2 py-1 rounded ${choice.effects.network > 0 ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
-                      Network {choice.effects.network > 0 ? '+' : ''}{choice.effects.network}
-                    </span>
-                  )}
-                  {choice.effects.narrative && (
-                    <span className={`text-xs px-2 py-1 rounded ${choice.effects.narrative > 0 ? 'bg-yellow-100 text-yellow-700' : 'bg-red-100 text-red-700'}`}>
-                      Narrative {choice.effects.narrative > 0 ? '+' : ''}{choice.effects.narrative}
-                    </span>
-                  )}
-                  {choice.effects.implementation && (
-                    <span className={`text-xs px-2 py-1 rounded ${choice.effects.implementation > 0 ? 'bg-purple-100 text-purple-700' : 'bg-red-100 text-red-700'}`}>
-                      Implementation {choice.effects.implementation > 0 ? '+' : ''}{choice.effects.implementation}
-                    </span>
-                  )}
+          {decision.choices.map((choice, index) => {
+            const isSelected = selectedChoice === index;
+            return (
+              <motion.button
+                key={index}
+                onClick={() => handleChoice(index)}
+                disabled={hasChosen}
+                className={`
+                  block w-full text-left p-4 border-2 rounded-lg transition-all duration-200
+                  ${hasChosen && !isSelected
+                    ? 'border-gray-300 bg-gray-100 cursor-not-allowed opacity-40'
+                    : hasChosen && isSelected
+                    ? 'border-green-500 bg-green-50 cursor-not-allowed'
+                    : 'border-border hover:border-primary hover:bg-primary/5 cursor-pointer'
+                  }
+                `}
+                whileHover={hasChosen ? {} : { scale: 1.02 }}
+                whileTap={hasChosen ? {} : { scale: 0.98 }}
+              >
+                <div className="block">
+                  <p className={`block text-base font-medium ${isSelected ? 'text-green-800' : 'text-text-dark'}`}>
+                    {isSelected && '✓ '}{choice.text}
+                  </p>
+                  {/* Effect hints */}
+                  <div className="block mt-2 flex flex-wrap gap-2">
+                    {choice.effects.evidence && (
+                      <span className={`text-xs px-2 py-1 rounded ${choice.effects.evidence > 0 ? 'bg-blue-100 text-blue-700' : 'bg-red-100 text-red-700'}`}>
+                        Evidence {choice.effects.evidence > 0 ? '+' : ''}{choice.effects.evidence}
+                      </span>
+                    )}
+                    {choice.effects.network && (
+                      <span className={`text-xs px-2 py-1 rounded ${choice.effects.network > 0 ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+                        Network {choice.effects.network > 0 ? '+' : ''}{choice.effects.network}
+                      </span>
+                    )}
+                    {choice.effects.narrative && (
+                      <span className={`text-xs px-2 py-1 rounded ${choice.effects.narrative > 0 ? 'bg-yellow-100 text-yellow-700' : 'bg-red-100 text-red-700'}`}>
+                        Narrative {choice.effects.narrative > 0 ? '+' : ''}{choice.effects.narrative}
+                      </span>
+                    )}
+                    {choice.effects.implementation && (
+                      <span className={`text-xs px-2 py-1 rounded ${choice.effects.implementation > 0 ? 'bg-purple-100 text-purple-700' : 'bg-red-100 text-red-700'}`}>
+                        Implementation {choice.effects.implementation > 0 ? '+' : ''}{choice.effects.implementation}
+                      </span>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </motion.button>
-          ))}
+              </motion.button>
+            );
+          })}
         </div>
       </div>
     </motion.div>
