@@ -54,9 +54,11 @@
       "title": "The Discount Rate Debate",
       "type": "framing_game",
       "contextCard": "DICE uses a discount rate to value future climate damages. A high rate (5%) makes future damages seem small—justifying modest action today. A low rate (1%) makes them enormous—demanding immediate drastic action. This isn't just math; it's ethics and economics intertwined. How you frame this will shape climate policy for decades.",
+      "words": ["market", "theory", "savings", "uncertainty", "scenarios", "sensitivity", "empirical", "robust", "evidence"],
       "choices": [
         {
           "text": "Defend market-based discount rates—align with observed savings behavior and economic theory",
+          "keywords": ["market", "theory", "savings", "empirical"],
           "effects": {
             "evidence": 8,
             "network": 6,
@@ -68,6 +70,7 @@
         },
         {
           "text": "Emphasize uncertainty—show results across multiple discount rate scenarios",
+          "keywords": ["uncertainty", "scenarios", "sensitivity", "robust"],
           "effects": {
             "evidence": 10,
             "network": 8,
@@ -126,7 +129,6 @@
       "yearRange": "2006-2007",
       "title": "The Stern Review Challenge",
       "type": "policy_window",
-      "timer": 30,
       "contextCard": "Nicholas Stern's review uses near-zero discounting and higher damage estimates, recommending immediate spending of 1% of global GDP on climate action. This contradicts DICE's more modest recommendations. The debate erupts—economists divide, policymakers are confused. How you respond will define your model's credibility.",
       "choices": [
         {

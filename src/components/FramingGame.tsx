@@ -129,7 +129,7 @@ export function FramingGame({ decision, onChoice }: FramingGameProps) {
         </div>
 
         {/* Word Grid */}
-        <div className="block grid grid-cols-3 gap-3 mb-6">
+        <div className="block grid grid-cols-3 gap-3 mb-8">
           {words.map((word) => {
             const isSelected = selectedWords.includes(word);
             return (
@@ -144,8 +144,8 @@ export function FramingGame({ decision, onChoice }: FramingGameProps) {
                     : 'cursor-pointer hover:scale-105'
                   }
                   ${isSelected
-                    ? 'bg-primary text-white border-primary shadow-md'
-                    : 'bg-white text-text-dark border-border hover:border-primary'
+                    ? 'bg-blue-600 text-white border-blue-600 shadow-lg'
+                    : 'bg-white text-gray-900 border-gray-300 hover:border-blue-500 hover:bg-blue-50'
                   }
                 `}
                 whileTap={hasSubmitted ? {} : { scale: 0.95 }}
@@ -177,10 +177,10 @@ export function FramingGame({ decision, onChoice }: FramingGameProps) {
           onClick={handleSubmit}
           disabled={selectedWords.length === 0 || hasSubmitted}
           className={`
-            w-full py-3 px-6 rounded-lg font-medium transition-all duration-200
+            w-full py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-200 shadow-md
             ${selectedWords.length === 0 || hasSubmitted
-              ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-              : 'bg-primary text-white hover:bg-primary-dark cursor-pointer'
+              ? 'bg-gray-400 text-gray-200 cursor-not-allowed opacity-50'
+              : 'bg-blue-600 text-white hover:bg-blue-700 cursor-pointer hover:shadow-lg'
             }
           `}
         >

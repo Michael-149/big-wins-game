@@ -137,7 +137,6 @@
       "yearRange": "2015-2016",
       "title": "The Tax Data Breakthrough",
       "type": "policy_window",
-      "timer": 30,
       "contextCard": "Raj Chetty, Nathaniel Hendren, and Lawrence Katz have linked MTO participants to IRS tax records. The results are stunning: children who moved to low-poverty neighborhoods before age 13 earn 31% more as adults—about $302,000 more over their lifetimes. Every additional year of exposure to a better neighborhood matters. This completely overturns the earlier conclusions.",
       "choices": [
         {
@@ -283,7 +282,6 @@
       "yearRange": "2021-2023",
       "title": "CMTO Evaluation Results",
       "type": "policy_window",
-      "timer": 30,
       "contextCard": "The experimental evaluation shows CMTO increased successful moves from 15% to 53%—a 3.5x improvement. The intervention is cost-effective: $2,600 in services generates an estimated $302,000 in lifetime earnings per child who moves young. HUD is launching a national mobility demonstration program. You've done it—transformed disappointing initial findings into transformative policy.",
       "choices": [
         {
