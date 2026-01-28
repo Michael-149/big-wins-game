@@ -32,7 +32,7 @@ export function FramingGame({ decision, onChoice }: FramingGameProps) {
   const getMatchingChoice = (): string => {
     // Find which choice best matches the selected words
     // The choice with the most keyword matches wins
-    let bestChoice = decision.choices[0];
+    let bestChoice = decision.choices[decision.choices.length - 1];
     let bestMatchCount = 0;
 
     decision.choices.forEach((choice) => {
@@ -54,8 +54,8 @@ export function FramingGame({ decision, onChoice }: FramingGameProps) {
   const handleSubmit = () => {
     if (selectedWords.length === 0 || hasSubmitted) return;
 
-    // Find matching choice index
-    let bestChoiceIndex = 0;
+    // Find matching choice index (default to last/worst choice if no keywords match)
+    let bestChoiceIndex = decision.choices.length - 1;
     let bestMatchCount = 0;
 
     decision.choices.forEach((choice, index) => {

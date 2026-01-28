@@ -129,6 +129,7 @@
       "yearRange": "2006-2007",
       "title": "The Stern Review Challenge",
       "type": "policy_window",
+      "timer": 30,
       "contextCard": "Nicholas Stern's review uses near-zero discounting and higher damage estimates, recommending immediate spending of 1% of global GDP on climate action. This contradicts DICE's more modest recommendations. The debate erupts—economists divide, policymakers are confused. How you respond will define your model's credibility.",
       "choices": [
         {
@@ -214,6 +215,36 @@
       "title": "Implementation and Litigation",
       "type": "slider_game",
       "contextCard": "The SCC is being used to evaluate regulations for power plants, vehicles, appliances, and methane emissions. Industry groups are suing, claiming the analysis is flawed. Environmental groups are suing, claiming it's too low. You're caught in the middle, defending both the science and the policy process.",
+      "sliders": [
+        {
+          "label": "Discount Rate (%)",
+          "min": 1,
+          "max": 7,
+          "targetMin": 2,
+          "targetMax": 3
+        },
+        {
+          "label": "Time Horizon (years)",
+          "min": 50,
+          "max": 300,
+          "targetMin": 150,
+          "targetMax": 250
+        },
+        {
+          "label": "Global Damage Inclusion (%)",
+          "min": 0,
+          "max": 100,
+          "targetMin": 70,
+          "targetMax": 100
+        },
+        {
+          "label": "Monte Carlo Simulations",
+          "min": 100,
+          "max": 10000,
+          "targetMin": 5000,
+          "targetMax": 8000
+        }
+      ],
       "choices": [
         {
           "text": "Successfully defend technical methodology in court through rigorous documentation and expert testimony",
