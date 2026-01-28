@@ -131,14 +131,14 @@ export default function App() {
               ) : currentDecision ? (
                 // Render appropriate decision type
                 currentDecision.type === 'policy_window' ? (
-                  <PolicyWindow decision={currentDecision} onChoice={handleChoice} />
+                  <PolicyWindow key={currentDecisionId} decision={currentDecision} onChoice={handleChoice} />
                 ) : currentDecision.type === 'framing_game' ? (
-                  <FramingGame decision={currentDecision} onChoice={handleChoice} />
+                  <FramingGame key={currentDecisionId} decision={currentDecision} onChoice={handleChoice} />
                 ) : currentDecision.type === 'slider_game' ? (
-                  <SliderGame decision={currentDecision} onChoice={handleChoice} />
+                  <SliderGame key={currentDecisionId} decision={currentDecision} onChoice={handleChoice} />
                 ) : (
                   // Default to DecisionCard for simple
-                  <DecisionCard decision={currentDecision} onChoice={handleChoice} />
+                  <DecisionCard key={currentDecisionId} decision={currentDecision} onChoice={handleChoice} />
                 )
               ) : (
                 // Loading state

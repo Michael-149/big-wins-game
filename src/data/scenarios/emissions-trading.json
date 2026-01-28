@@ -129,6 +129,7 @@
       "yearRange": "1988-1989",
       "title": "Project 88: Knowledge Brokering",
       "type": "policy_window",
+      "timer": 30,
       "contextCard": "Robert Stavins and Senators Wirth and Heinz are launching Project 88—a nonpartisan effort funded by major philanthropies to develop emissions trading recommendations. This convenes industry, academia, environmental organizations, and government. It's not just research; it's strategic coalition-building around market mechanisms. This could be the breakthrough.",
       "choices": [
         {
@@ -171,6 +172,7 @@
       "yearRange": "1990-1995",
       "title": "The Acid Rain Program",
       "type": "policy_window",
+      "timer": 30,
       "contextCard": "The 1990 Clean Air Act amendments establish the Acid Rain Program—a national cap-and-trade system for SO₂ and NOx from power plants. This is the first large-scale emissions trading system. Early results are exceeding expectations: emissions are dropping faster than projected, at lower costs than command-and-control alternatives.",
       "choices": [
         {

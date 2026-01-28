@@ -35,6 +35,7 @@ export function SliderGame({ decision, onChoice }: SliderGameProps) {
   };
 
   const getQualityGrade = (score: number): string => {
+    if (sliders.length === 0) return 'N/A';
     const percentage = (score / sliders.length) * 100;
     if (percentage >= 75) return 'Excellent';
     if (percentage >= 50) return 'Good';
@@ -46,7 +47,7 @@ export function SliderGame({ decision, onChoice }: SliderGameProps) {
     if (hasSubmitted) return;
 
     const score = calculateScore();
-    const percentage = (score / sliders.length) * 100;
+    const percentage = sliders.length > 0 ? (score / sliders.length) * 100 : 0;
 
     // Determine choice based on score
     // Higher score = better choice (typically first choice)
