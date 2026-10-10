@@ -13,7 +13,7 @@
 
 ### User Profile
 - I am not a professional software engineer.
-- I cannot read code. I often do not understand tooling, deployment, or infrastructure steps.
+- Explain tooling, deployment, and infrastructure steps in plain language.
 - Assume I prefer clarity and safety over cleverness.
 
 ### How to Work with Me
