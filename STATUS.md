@@ -108,7 +108,7 @@ None
 - Behavioral Nudges (policy window)
 
 ## Known Issues
-None
+- `npm run lint` fails: the project has no ESLint flat config (`eslint.config.js`). Build is unaffected.
 
 ## Last Updated
-2026-01-23 - Phase 5 Complete - All Mini-Games Implemented
+2026-10-10 - Security update: `npm audit fix` cleared all reported dependency vulnerabilities (build tools only; the built site is byte-identical)
